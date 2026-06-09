@@ -1,0 +1,1959 @@
+:root{
+  --cream:#fff8f4;
+  --rose:#b8325e;
+  --pink:#ffecef;
+  --thread:#c9184a;
+  --coffee:#6b3f2a;
+  --wine:#4a0d23;
+  --ink:#321a25;
+  --gold:#ffffff;
+  --shadow:rgba(74,13,35,.22);
+  --valentine-blush:#FADADD;
+  --soft-rose:#FFE5EC;
+  --letter-cream:#FFF8F0;
+  --paper-white:#FFFDF9;
+  --cupid-red:#C9184A;
+  --deep-rose:#9B1D48;
+  --berry-ink:#4A102A;
+  --gold-seal:#fed993;
+  --warm-shadow:rgba(74,16,42,.22);
+  --wine-red:#4A0D23;
+  --black-envelope:#161016;
+  --charcoal-paper:#2B2528;
+  --silver-ink:#CFC7C7;
+  --blood-red:#7A001F;
+  --dark-glow:rgba(122,0,31,.45);
+  --restricted-envelope:#5A102A;
+  --restricted-envelope-deep:#3A0718;
+  --restricted-envelope-highlight:#7A1C3A;
+  --restricted-envelope-text:#F7D6DD;
+  --restricted-seal:#A0002A;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body.romance-page{
+  position:relative;
+  min-height:100vh;
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 20% 14%,rgba(255,253,249,.22),transparent 22rem),
+    linear-gradient(180deg,rgba(255,229,236,.74) 0%,rgba(156,43,80,.5) 52%,rgba(74,13,35,.78) 100%),
+    url("../Images/romance-midnight-cafe.png") center top/cover fixed;
+  font-family:Inter,sans-serif;
+  overflow-x:hidden;
+}
+
+body.romance-page::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 18%,rgba(255,248,244,.32),transparent 18rem),
+    radial-gradient(circle at 78% 32%,rgba(217,166,95,.2),transparent 19rem),
+    linear-gradient(180deg,rgba(255,248,244,.18),rgba(74,13,35,.24));
+  backdrop-filter:blur(1px);
+}
+
+.romance-nav,
+.romance-shell,
+.romance-ai-guide,
+.romance-dialog{
+  position:relative;
+  z-index:1;
+}
+
+.romance-nav{
+  background:rgba(43,13,24,.78);
+  border-bottom:1px solid rgba(255,248,244,.18);
+  backdrop-filter:blur(18px);
+}
+.romance-nav a{color:#fff8f4}
+.romance-nav .nav-links a{color:rgba(255,248,244,.72)}
+
+.romance-shell{
+  width:min(1340px,calc(100% - 2rem));
+  margin:0 auto;
+  padding:1rem 0 4rem;
+}
+
+.cafe-hero{
+  position:relative;
+  min-height:690px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border:1px solid rgba(255,248,244,.18);
+  border-radius:26px;
+  padding:clamp(1.5rem,4vw,3rem);
+  color:#fff8f4;
+  text-align:center;
+  background:
+    url("../Images/romance-midnight-cafe.png") center/cover;
+  box-shadow:0 34px 100px rgba(43,13,24,.34);
+}
+
+.cafe-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(28,5,15,.34),transparent 30%,transparent 70%,rgba(28,5,15,.34)),
+    radial-gradient(ellipse at 50% 100%,rgba(0,0,0,.54),transparent 34rem);
+}
+
+.hero-copy{
+  max-width:820px;
+  position:relative;
+  z-index:3;
+  display:grid;
+  justify-items:center;
+}
+
+.love-label{
+  margin:0 0 .75rem;
+  color:var(--gold);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.hero-copy h1{
+  margin:0;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(4rem,8vw,8rem);
+  font-style:italic;
+  line-height:.86;
+  letter-spacing:-.035em;
+  text-shadow:0 18px 48px rgba(0,0,0,.42);
+}
+
+.hero-copy p:not(.love-label){
+  max-width:580px;
+  color:rgba(255,248,244,.88);
+  font-family:"Playfair Display",serif;
+  font-size:clamp(1.3rem,2.4vw,2.3rem);
+  font-style:italic;
+  line-height:1.25;
+}
+
+.romance-word-cloud{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+}
+
+.romance-word-cloud span{
+  position:absolute;
+  color:rgba(255,248,244,.64);
+  font-size:.74rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  text-shadow:0 6px 20px rgba(0,0,0,.28);
+}
+/* Push floating trope words away from the title */
+.romance-word-cloud span:nth-child(1) {
+  left: 5%;
+  top: 22%;
+  transform: rotate(-8deg);
+}
+
+.romance-word-cloud span:nth-child(2) {
+  right: 7%;
+  top: 25%;
+  transform: rotate(7deg);
+}
+
+.romance-word-cloud span:nth-child(3) {
+  left: 8%;
+  bottom: 17%;
+  transform: rotate(6deg);
+}
+
+.romance-word-cloud span:nth-child(4) {
+  right: 12%;
+  bottom: 13%;
+  transform: rotate(-5deg);
+}
+
+.romance-word-cloud span:nth-child(5) {
+  left: 48%;
+  top: 14%;
+  transform: rotate(3deg);
+}
+
+.romance-word-cloud span:nth-child(6) {
+  right: 29%;
+  bottom: 21%;
+  transform: rotate(-9deg);
+}
+.hero-silhouettes{
+  position:absolute;
+  left:50%;
+  bottom:-12px;
+  z-index:1;
+  width:min(470px,64vw);
+  height:370px;
+  transform:translateX(-50%);
+  opacity:.82;
+  filter:drop-shadow(0 24px 34px rgba(0,0,0,.42));
+}
+
+.silhouette{
+  position:absolute;
+  bottom:0;
+  width:145px;
+  height:285px;
+  border-radius:48% 48% 22% 22% / 28% 28% 7% 7%;
+  background:linear-gradient(180deg,rgba(18,8,13,.84),rgba(8,3,6,.96));
+}
+
+.silhouette::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-58px;
+  width:86px;
+  height:96px;
+  transform:translateX(-50%);
+  border-radius:50% 50% 47% 47%;
+  background:linear-gradient(180deg,rgba(18,8,13,.84),rgba(8,3,6,.96));
+}
+
+.silhouette-one{
+  left:76px;
+  transform:rotate(-5deg);
+}
+
+.silhouette-two{
+  right:76px;
+  width:132px;
+  height:300px;
+  transform:rotate(5deg);
+}
+
+.cafe-button{
+  display:inline-flex;
+  width:max-content;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,248,244,.56);
+  border-radius:999px;
+  padding:.84rem 1.05rem;
+  color:#fff8f4;
+  background:linear-gradient(135deg,var(--thread),var(--rose));
+  box-shadow:0 18px 36px rgba(201,24,74,.24);
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-decoration:none;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.cafe-button.small{font-size:.7rem;padding:.7rem .85rem}
+.cafe-button.secondary{background:linear-gradient(135deg,#4a0d23,#2b0d18)}
+
+.cafe-status{
+  display:none;
+}
+.cafe-status p,.cafe-status strong,.cafe-status span{display:block;margin:0}
+.cafe-status p{color:var(--gold);font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.cafe-status strong{margin:.25rem 0;font-family:"Playfair Display",serif;font-size:2.4rem}
+.cafe-status span{color:rgba(255,248,244,.74);line-height:1.45}
+
+.romance-grid{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+
+.cafe-panel{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(74,13,35,.18);
+  border-radius:20px;
+  padding:clamp(1.25rem,3vw,2rem);
+  background:rgba(255,248,244,.86);
+  box-shadow:0 24px 70px rgba(74,13,35,.16);
+}
+.cafe-panel h2,
+.section-heading h2,
+.simp-profile h2{
+  margin:.2rem 0 1rem;
+  color:var(--wine);
+  font-family:"Playfair Display",serif;
+  font-size:clamp(1.85rem,3.2vw,3.5rem);
+  font-style:italic;
+  line-height:1;
+}
+
+.meet-panel{
+  grid-column:1 / span 5;
+  min-height:460px;
+  display:flex;
+  flex-direction:column;
+  background:
+    linear-gradient(180deg,rgba(255,248,244,.78),rgba(255,236,239,.58)),
+    url("../Images/romance-midnight-cafe.png") left center/cover;
+}
+.dating-card{
+  min-height:230px;
+  display:grid;
+  align-content:center;
+  gap:1rem;
+  margin:auto 0;
+  border:1px solid rgba(184,50,94,.18);
+  border-radius:18px;
+  padding:1.2rem;
+  background:#fff8f4;
+  box-shadow:0 18px 44px rgba(184,50,94,.12);
+}
+.dating-card p{
+  margin:0;
+  color:#6e3047;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(1.45rem,2.4vw,2.35rem);
+  font-style:italic;
+  line-height:1.18;
+}
+
+.playlist-panel{
+  grid-column:6 / -1;
+  min-height:460px;
+  background:
+    linear-gradient(180deg,rgba(255,248,244,.76),rgba(255,236,239,.46)),
+    url("../Images/romance-red-string-hero.png") center/cover;
+}
+.playlist-panel iframe{
+  margin-top:.5rem;
+  border:0;
+  border-radius:12px;
+  filter:saturate(.9) sepia(.08);
+}
+
+.trope-map-panel{
+  min-height:760px;
+  margin-top:1rem;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(255,236,239,.72),rgba(255,248,244,.7) 36%,rgba(74,13,35,.1)),
+    url("../Images/romance-red-string-hero.png") center/cover;
+}
+.section-heading{
+  position:relative;
+  z-index:2;
+  width:max-content;
+  max-width:100%;
+  border-left:3px solid var(--thread);
+  border-radius:9px;
+  padding:.7rem .9rem;
+  background:rgba(255,248,244,.82);
+  box-shadow:0 12px 30px rgba(74,13,35,.12);
+}
+.trope-map{
+  position:relative;
+  min-height:560px;
+  margin-top:1rem;
+}
+.trope-map::before{
+  content:"";
+  position:absolute;
+  inset:12%;
+  border:5px solid rgba(201,24,74,.64);
+  border-radius:50%;
+  box-shadow:0 0 0 2px rgba(255,248,244,.9),0 20px 50px rgba(201,24,74,.18);
+}
+.trope-map::after{
+  content:"";
+  position:absolute;
+  left:16%;
+  right:16%;
+  top:50%;
+  height:7px;
+  border-radius:999px;
+  background:linear-gradient(90deg,transparent,var(--thread),transparent);
+  box-shadow:0 -130px 0 rgba(201,24,74,.38),0 130px 0 rgba(201,24,74,.38);
+}
+.map-center{
+  position:absolute;
+  left:50%;
+  top:50%;
+  z-index:3;
+  width:180px;
+  height:180px;
+  display:grid;
+  place-items:center;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  color:#fff8f4;
+  background:linear-gradient(145deg,var(--thread),var(--wine));
+  box-shadow:0 20px 46px rgba(201,24,74,.26);
+  font-family:"Playfair Display",serif;
+  font-size:1.8rem;
+  font-style:italic;
+  text-align:center;
+}
+.trope-node{
+  position:absolute;
+  z-index:4;
+  width:240px;
+  border:1px solid rgba(184,50,94,.2);
+  border-radius:16px;
+  padding:1rem;
+  background:rgba(255,248,244,.92);
+  box-shadow:0 18px 40px rgba(74,13,35,.14);
+}
+.trope-node h3{
+  margin:.1rem 0 .7rem;
+  color:var(--wine);
+  font-family:"Playfair Display",serif;
+  font-size:1.45rem;
+  font-style:italic;
+}
+.trope-node button{
+  display:block;
+  width:100%;
+  border:0;
+  border-radius:999px;
+  margin:.35rem 0;
+  padding:.5rem .65rem;
+  color:#6e3047;
+  background:#ffecef;
+  font-weight:800;
+  text-align:left;
+  cursor:pointer;
+}
+.trope-node button:hover,.trope-node button:focus-visible{outline:none;background:#ffd7e1}
+.node-1{left:5%;top:9%}.node-2{right:7%;top:8%}.node-3{left:10%;bottom:12%}.node-4{right:10%;bottom:11%}.node-5{left:50%;top:3%;transform:translateX(-50%)}.node-6{left:50%;bottom:3%;transform:translateX(-50%)}
+.cafe-table-panel {
+  grid-column: 1 / span 5;
+  min-height: 560px;
+  background:
+    linear-gradient(180deg, rgba(74,13,35,.5), rgba(43,13,24,.74)),
+    url("../Images/romance-midnight-cafe.png") center/cover;
+  color: #fff8f4;
+}
+
+.cafe-table-panel h2,.cafe-table-panel .love-label{color:#fff8f4}
+.table-scene{
+  position:absolute;
+  left:6%;
+  right:6%;
+  bottom:13%;
+  height:365px;
+  border-radius:48% 48% 26px 26px / 18% 18% 26px 26px;
+
+  background:url("../Images/tabletexture.webp") center / cover;
+
+  box-shadow:
+    0 36px 70px rgba(0,0,0,.36),
+    inset 0 0 0 1px rgba(255,248,244,.14),
+    inset 0 -24px 34px rgba(18,5,4,.4);
+
+  transform:perspective(920px) rotateX(8deg);
+  transform-origin:center bottom;
+}
+.table-scene::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:rgba(26, 10, 7, 0.42);
+  pointer-events:none;
+}
+.table-object{
+  position:absolute;
+  border:0;
+  color:transparent;
+  background:transparent;
+  cursor:pointer;
+  filter:drop-shadow(0 18px 18px rgba(0,0,0,.32));
+}
+.table-object span{
+  position:absolute;
+  left:50%;
+  top:100%;
+  transform:translateX(-50%);
+  margin-top:.35rem;
+  border-radius:999px;
+  padding:.25rem .4rem;
+  color:#fff8f4;
+  background:rgba(43,13,24,.72);
+  font-size:.62rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  opacity:0;
+  white-space:nowrap;
+}
+.table-object:hover span,.table-object:focus-visible span{opacity:1}
+.table-object.coffee{left:9%;top:20%;width:150px;height:150px;background:url("../Images/coffee cup.png") center/contain no-repeat;transform:rotate(-7deg)}
+.table-object.ticket{left:2%;bottom:12%;width:188px;height:92px;background:url("../Images/ticket.png") center/contain no-repeat;transform:rotate(7deg)}
+.table-object.letter{left:41%;top:10%;width:188px;height:134px;background:url("../Images/7. letters.jpg") center/cover;border:3px solid #140700;border-radius:7px;transform:rotate(-9deg)}
+.table-object.text {
+  right: 6%;
+  top: 40%;
+  width: 130px;
+  height: 190px;
+  border: 0;
+  border-radius: 0;
+  background: url("../Images/penting.png") center / contain no-repeat;
+  transform: rotate(8deg);
+  box-shadow: none;
+}
+
+.table-object.text::before,
+.table-object.text::after {
+  display: none;
+}
+
+.table-object.flower{
+  left:50%;
+  bottom:9%;
+  width:190px;
+  height:150px;
+  background:url("../Images/flowers.PNG") center / contain no-repeat;
+  transform:translateX(-50%) rotate(3deg);
+  clip-path:none;
+}
+
+.table-output{
+  position:absolute;
+  left:7%;
+  right:7%;
+  bottom:6%;
+  margin:0;
+  border-left:3px solid var(--gold);
+  padding:.8rem 1rem;
+  color:#fff8f4;
+  background:rgba(43,13,24,.82);
+  line-height:1.55;
+}
+
+.bad-decisions-panel {
+  grid-column: 6 / -1;
+  min-height: 560px;
+  background:
+    linear-gradient(180deg, rgba(255,248,244,.86), rgba(255,236,239,.74)),
+    url("../Images/romance-midnight-cafe.png") right center/cover;
+}
+.sticky-wall {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .90rem;
+  margin-top: 1.2rem;
+}
+.sticky-note {
+  position: relative;
+  min-height: 112px;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 6px 8px 7px 6px;
+  padding: 1.05rem .9rem .85rem;
+  color: #5f3140;
+
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.24), transparent 36%),
+    linear-gradient(180deg, rgba(255,248,244,.18), rgba(74,13,35,.04)),
+    url("../Images/papertexture.jpg") center / cover;
+
+  box-shadow:
+    0 14px 20px rgba(74,13,35,.14),
+    inset 0 0 0 1px rgba(255,255,255,.28);
+
+  font-family: Inter, sans-serif;
+  font-size: .82rem;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1.22;
+  text-align: left;
+  cursor: pointer;
+  transform: rotate(var(--tilt));
+}
+.sticky-note::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  width: 48px;
+  height: 20px;
+  transform: translateX(-50%) rotate(-2deg);
+  border-radius: 3px;
+  background: rgba(255,248,244,.56);
+  box-shadow: 0 3px 7px rgba(74,13,35,.1);
+}
+.sticky-note::after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:31px;
+  height:31px;
+  border-radius:6px 0 4px;
+  background:linear-gradient(135deg,rgba(207,150,64,.2),rgba(255,255,255,.52));
+  clip-path:polygon(100% 0,100% 100%,0 100%);
+}
+.sticky-output{
+  margin-top:1.2rem;
+  border-left:3px solid var(--thread);
+  padding:.9rem 1rem;
+  color:#fff8f4;
+  background:var(--wine);
+  font-family:"Playfair Display",serif;
+  font-size:1.5rem;
+  font-style:italic;
+}
+
+.shelf-panel{
+  grid-column:1 / span 7;
+  min-height:650px;
+  background:
+    linear-gradient(180deg,rgba(255,248,244,.68),rgba(255,236,239,.48)),
+    url("../Images/bookshelf background blurred.jpg") center/cover;
+}
+.romance-shelf{
+  position:relative;
+  min-height:390px;
+  display:flex;
+  align-items:flex-end;
+  gap:.25rem;
+  margin-top:2rem;
+  overflow-x:auto;
+  padding:2rem .8rem 3.4rem;
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,248,244,.16),rgba(74,13,35,.18));
+}
+.romance-shelf::after{
+  content:"";
+  position:absolute;
+  left:.8rem;
+  right:.8rem;
+  bottom:2.1rem;
+  height:26px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#6b3f2a,#2b0d18);
+  box-shadow:0 12px 22px rgba(43,13,24,.26);
+}
+.shelf-book{
+  position:relative;
+  z-index:2;
+  flex:0 0 142px;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  transform:rotate(var(--tilt));
+  transition:transform .22s ease;
+}
+.shelf-book:hover,.shelf-book:focus-visible{outline:none;transform:translateY(-12px) rotate(var(--tilt))}
+.shelf-book img{
+  width:142px;
+  height:232px;
+  display:block;
+  border-radius:8px;
+  object-fit:contain;
+  background:#4a0d23;
+  box-shadow:10px 12px 0 rgba(184,50,94,.18),0 24px 42px rgba(74,13,35,.18);
+}
+.shelf-book span{
+  display:block;
+  margin-top:.7rem;
+  color:var(--wine);
+  font-weight:900;
+  text-align:left;
+}
+
+.simp-profile{
+  grid-column:8 / -1;
+  min-height:650px;
+  background:
+    linear-gradient(90deg,rgba(255,248,244,.9),rgba(255,236,239,.68)),
+    url("../Images/romance-midnight-cafe.png") center/cover;
+}
+.match-profile{
+  max-width:560px;
+  justify-self:center;
+  display:grid;
+  align-content:start;
+  border-radius:26px;
+  border:1px solid rgba(255,248,244,.7);
+  background:
+    linear-gradient(180deg,rgba(255,248,244,.95),rgba(255,236,239,.86)),
+    url("../Images/romance-red-string-hero.png") center/cover;
+  box-shadow:0 30px 78px rgba(74,13,35,.22);
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 44%;
+  border-radius: 22px 22px 12px 12px;
+  overflow: hidden;
+  background: #f7d6dd;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+.profile-line{
+  color:#6e3047;
+  font-family:"Playfair Display",serif;
+  font-size:1.45rem;
+  font-style:italic;
+  line-height:1.3;
+}
+.profile-stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  border-top:1px solid rgba(184,50,94,.14);
+  border-bottom:1px solid rgba(184,50,94,.14);
+  padding:.8rem 0;
+  color:var(--rose);
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.profile-about p{color:#6e3047;line-height:1.75}
+.match-actions{
+  display:grid;
+  grid-template-columns:minmax(110px,.8fr) minmax(150px,1.35fr);
+  gap:.8rem;
+  margin-top:1.2rem;
+}
+.pass-button,
+.match-button{
+  min-height:56px;
+  border-radius:999px;
+  font-weight:900;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.pass-button{
+  border:1px solid rgba(74,13,35,.24);
+  color:#6e3047;
+  background:rgba(255,248,244,.9);
+}
+.match-button{
+  border:1px solid rgba(255,248,244,.72);
+  color:#fff8f4;
+  background:linear-gradient(135deg,var(--thread),var(--rose));
+  box-shadow:0 18px 34px rgba(201,24,74,.26);
+}
+.match-button:disabled{
+  cursor:wait;
+  opacity:.82;
+}
+.profile-response{
+  min-height:1.5rem;
+  margin:.9rem 0 0;
+  color:var(--wine);
+  font-weight:800;
+}
+.match-profile.is-passing{
+  animation:profileShake .32s ease;
+}
+@keyframes profileShake{
+  0%,100%{transform:translateX(0)}
+  24%{transform:translateX(-8px) rotate(-1deg)}
+  52%{transform:translateX(7px) rotate(1deg)}
+  78%{transform:translateX(-4px)}
+}
+
+.romance-dialog{
+  width:min(900px,calc(100vw - 2rem));
+  max-height:calc(100vh - 2rem);
+  margin:auto;
+  border:0;
+  padding:0;
+  color:var(--ink);
+  background:transparent;
+  overflow:auto;
+}
+.romance-dialog::backdrop{background:rgba(43,13,24,.62);backdrop-filter:blur(10px)}
+.close-romance{
+  position:absolute;
+  right:1rem;
+  top:1rem;
+  z-index:3;
+  width:2.2rem;
+  height:2.2rem;
+  border:1px solid rgba(58,31,43,.2);
+  border-radius:50%;
+  color:#fff8f8;
+  background:#3a1f2b;
+  cursor:pointer;
+}
+.dating-flyer{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:1.25rem;
+  padding:1.3rem;
+  border:1px solid rgba(184,50,94,.25);
+  border-radius:20px;
+  background:#fff8f8;
+  box-shadow:0 34px 100px rgba(0,0,0,.34);
+}
+.modal-cover{
+  margin:0;
+  display:grid;
+  grid-template-rows:1fr auto;
+  overflow:hidden;
+  border-radius:10px;
+  background:#4a0d23;
+  box-shadow:10px 13px 0 rgba(201,24,74,.18),0 22px 42px rgba(0,0,0,.24);
+}
+.modal-cover img{
+  width:100%;
+  height:360px;
+  object-fit:contain;
+  background:#4a0d23;
+}
+.modal-cover figcaption{
+  padding:.75rem .9rem;
+  color:#fff8f8;
+  background:linear-gradient(90deg,var(--wine),var(--rose));
+  font-weight:900;
+}
+.modal-copy h2{
+  margin:.2rem 0 .8rem;
+  color:var(--wine);
+  font-family:"Playfair Display",serif;
+  font-size:clamp(2.4rem,5vw,4.4rem);
+  font-style:italic;
+  line-height:.9;
+}
+.modal-kicker,dt{
+  color:var(--rose);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+dl{display:grid;gap:.7rem;margin:0}
+dd{margin:.15rem 0 0;line-height:1.55;color:#6e3047}
+
+.cupid-letters-panel{
+  position:relative;
+  min-height:1120px;
+  margin-top:1rem;
+  overflow:hidden;
+  border:1px solid rgba(74,13,35,.18);
+  border-radius:24px;
+  padding:clamp(1.25rem,3vw,2.2rem);
+  background:
+    radial-gradient(circle at 18% 16%,rgba(255,255,255,.42),transparent 14rem),
+    radial-gradient(circle at 78% 8%,rgba(217,164,65,.2),transparent 20rem),
+    linear-gradient(180deg,rgba(255,229,236,.78) 0%,rgba(181,63,96,.6) 55%,rgba(86,18,43,.78) 78%,rgba(48,12,27,.88) 100%),
+    url("../Images/romance-midnight-cafe.png") center/cover;
+  box-shadow:0 28px 80px rgba(74,13,35,.22);
+}
+.cupid-letters-panel::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.32;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 9% 24%,rgba(201,24,74,.28) 0 8px,transparent 9px),
+    radial-gradient(ellipse at 14% 28%,rgba(201,24,74,.2) 0 6px,transparent 7px),
+    radial-gradient(circle at 82% 24%,rgba(217,164,65,.24) 0 8px,transparent 9px),
+    linear-gradient(28deg,transparent 0 72%,rgba(255,248,244,.34) 72.3% 74%,transparent 74.3%),
+    repeating-linear-gradient(0deg,rgba(74,16,42,.035) 0 1px,transparent 1px 9px);
+}
+.cupid-letters-panel::after{
+  content:"";
+  position:absolute;
+  inset:1rem;
+  pointer-events:none;
+  opacity:.42;
+  background:
+    radial-gradient(ellipse at 92% 18%,rgba(255,248,244,.42) 0 3px,transparent 4px),
+    radial-gradient(ellipse at 88% 22%,rgba(201,24,74,.24) 0 7px,transparent 8px),
+    linear-gradient(105deg,transparent 0 11%,rgba(155,29,72,.18) 11.3% 12.3%,transparent 12.6%),
+    linear-gradient(18deg,transparent 0 78%,rgba(217,164,65,.18) 78.3% 79.5%,transparent 79.8%);
+}
+.cupid-desk-heading{
+  position:relative;
+  z-index:2;
+  max-width:780px;
+}
+.cupid-desk-heading h2,
+.dark-letter-transition h2{
+  margin:.2rem 0 .7rem;
+  color:var(--berry-ink);
+  font-family:"Playfair Display",serif;
+  font-size:clamp(2.6rem,5vw,5.2rem);
+  font-style:italic;
+  line-height:.9;
+}
+.cupid-desk-heading p:not(.love-label){
+  max-width:620px;
+  color:#6e3047;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(1.25rem,2vw,1.8rem);
+  font-style:italic;
+  line-height:1.25;
+}
+.desk-scatter{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(280px,1fr));
+  gap:2rem;
+  min-height:0;
+  margin-top:1.8rem;
+  padding:2rem 0;
+  align-items:center;
+}
+.cupid-envelope{
+  position:relative;
+  width:100%;
+  max-width:420px;
+  min-height:178px;
+  justify-self:center;
+  border:0;
+  border-radius:10px;
+  padding:1.1rem;
+  color:var(--berry-ink);
+  background:
+    linear-gradient(145deg,transparent 49%,rgba(201,24,74,.14) 50%,transparent 51%),
+    linear-gradient(35deg,transparent 49%,rgba(155,29,72,.12) 50%,transparent 51%),
+    var(--letter-cream);
+  box-shadow:0 22px 42px var(--warm-shadow);
+  cursor:pointer;
+  transform:rotate(var(--tilt));
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.cupid-envelope:hover,
+.cupid-envelope:focus-visible{
+  outline:none;
+  transform:translateY(-8px) rotate(var(--tilt));
+  box-shadow:0 30px 54px rgba(74,16,42,.28);
+}
+.cupid-envelope::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:58%;
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  border-radius:10px 10px 0 0;
+  background:rgba(255,229,236,.8);
+  pointer-events:none;
+}
+.postage-stamp{
+  position:absolute;
+  right:1rem;
+  top:1rem;
+  z-index:4;
+  width:3.15rem;
+  height:3.45rem;
+  display:grid;
+  place-items:center;
+  border:2px solid rgba(155,29,72,.38);
+  border-radius:4px;
+  background:
+    repeating-linear-gradient(45deg,rgba(201,24,74,.08) 0 2px,transparent 2px 5px),
+    rgba(255,253,249,.72);
+  box-shadow:0 7px 14px rgba(74,16,42,.14);
+  font-weight:900;
+}
+.postage-stamp::after{
+  content:attr(data-stamp);
+  color:var(--deep-rose);
+  font-family:Inter,sans-serif;
+  font-size:1.15rem;
+}
+.wax-seal{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:3rem;
+  height:3rem;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 36% 30%,rgba(255,255,255,.28),transparent .45rem),
+    var(--cupid-red);
+  box-shadow:0 8px 18px rgba(201,24,74,.34);
+}
+.wax-seal::after{
+  content:"♥";
+  display:grid;
+  place-items:center;
+  height:100%;
+  color:#fff8f8;
+  font-size:1rem;
+}
+.cupid-envelope:hover .wax-seal,
+.cupid-envelope:focus-visible .wax-seal{
+  box-shadow:0 8px 18px rgba(201,24,74,.34),0 0 24px rgba(217,164,65,.55);
+}
+.envelope-address{
+  position:absolute;
+  top:1.45rem;
+  left:1.4rem;
+  right:5.2rem;
+  z-index:2;
+  display:block;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(1rem,1.25vw,1.25rem);
+  font-style:italic;
+  line-height:1.08;
+  text-align:left;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.trope-tooltip{
+  position:absolute;
+  left:1rem;
+  bottom:.8rem;
+  z-index:2;
+  border-radius:999px;
+  padding:.32rem .55rem;
+  color:#fff8f8;
+  background:var(--deep-rose);
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  opacity:0;
+  transform:translateY(5px);
+  transition:opacity .2s ease,transform .2s ease;
+}
+.cupid-envelope:hover .trope-tooltip,
+.cupid-envelope:focus-visible .trope-tooltip{
+  opacity:1;
+  transform:translateY(0);
+}
+.dark-letter-transition{
+  position:relative;
+  z-index:2;
+  max-width:720px;
+  margin:3rem 0 1rem;
+  padding:1.2rem;
+  border-left:4px solid var(--blood-red);
+  color:var(--silver-ink);
+  background:rgba(96, 1, 36, 0.72);
+  box-shadow:0 18px 40px rgba(74,13,35,.32);
+}
+.dark-letter-transition h2{color:#fff8f8}
+.dark-letter-transition p:not(.love-label){
+  color:var(--silver-ink);
+  font-family:"Playfair Display",serif;
+  font-size:1.5rem;
+  font-style:italic;
+}
+.dark-scatter{
+  grid-template-columns:repeat(3,minmax(280px,1fr));
+  min-height:0;
+  margin-top:1.3rem;
+}
+.dark-envelope{
+  color:var(--restricted-envelope-text);
+  background:
+    linear-gradient(145deg,transparent 49%,rgba(122,28,58,.34) 50%,transparent 51%),
+    linear-gradient(35deg,transparent 49%,rgba(247,214,221,.12) 50%,transparent 51%),
+    radial-gradient(circle at 24% 16%,rgba(255,255,255,.08),transparent 7rem),
+    linear-gradient(145deg,var(--restricted-envelope-highlight),var(--restricted-envelope) 48%,var(--restricted-envelope-deep));
+  box-shadow:0 24px 52px rgba(58,7,24,.4),0 0 28px rgba(122,0,31,.32);
+}
+.dark-envelope::before{background:rgba(122,28,58,.42)}
+.dark-envelope .wax-seal{background:var(--restricted-seal)}
+.dark-envelope .postage-stamp{
+  border-color:rgba(247,214,221,.45);
+  background:
+    repeating-linear-gradient(45deg,rgba(247,214,221,.08) 0 2px,transparent 2px 5px),
+    rgba(58,7,24,.72);
+}
+.dark-envelope .postage-stamp::after{
+  color:var(--restricted-envelope-text);
+}
+.dark-envelope .trope-tooltip{
+  color:#fff8f8;
+  background:var(--blood-red);
+}
+.bottom-grid .match-profile {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+}
+.final-letter-cta{
+  margin-top:1rem;
+  display:grid;
+  place-items:center;
+}
+.final-envelope{
+  position:relative;
+  width:min(720px,100%);
+  min-height:210px;
+  display:grid;
+  align-content:center;
+  justify-items:center;
+  gap:.7rem;
+  border-radius:12px;
+  padding:2rem;
+  color:var(--berry-ink);
+  text-align:center;
+  background:
+    linear-gradient(145deg,transparent 49%,rgba(201,24,74,.14) 50%,transparent 51%),
+    var(--letter-cream);
+  box-shadow:0 24px 58px var(--warm-shadow);
+  transform:rotate(-1deg);
+}
+.final-envelope p{
+  margin:0;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(1.5rem,3vw,2.4rem);
+  font-style:italic;
+}
+.final-envelope span{
+  color:#6e3047;
+  font-weight:800;
+}
+.letter-dialog{
+  width:min(92vw,1100px);
+  max-height:88vh;
+  border-radius:28px;
+}
+.opened-letter{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(201,24,74,.22);
+  border-radius:24px;
+  padding:clamp(1.2rem,3vw,2rem);
+  color:var(--berry-ink);
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.02),rgba(255,255,255,.08),rgba(255,255,255,.02)),
+    linear-gradient(180deg,rgba(255,255,255,.6),transparent 32%),
+    var(--paper-white);
+  box-shadow:0 34px 100px rgba(0,0,0,.34);
+  animation:letterUnfold .28s ease-out;
+}
+.opened-letter::after{
+  content:"";
+  position:absolute;
+  right:1.4rem;
+  top:5.2rem;
+  width:5.5rem;
+  height:5.5rem;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(201,24,74,.16),transparent 68%);
+}
+.letter-fold-mark{
+  position:absolute;
+  left:0;
+  right:0;
+  top:33%;
+  height:1px;
+  background:rgba(201,24,74,.06);
+}
+.opened-letter h2{
+  margin:.2rem 0 .8rem;
+  color:var(--deep-rose);
+  font-family:"Playfair Display",serif;
+  max-width:900px;
+  font-size:clamp(2.2rem,4.6vw,5rem);
+  font-style:italic;
+  line-height:.95;
+}
+.letter-opening{
+  max-width:760px;
+  color:#6e3047;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(1.25rem,2vw,1.8rem);
+  font-style:italic;
+  line-height:1.3;
+}
+.letter-meta{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:.75rem;
+  margin:1.2rem 0;
+}
+.letter-meta div,
+.letter-content-notes{
+  border:1px solid rgba(201,24,74,.16);
+  border-radius:12px;
+  padding:.8rem;
+  background:rgba(255,229,236,.54);
+}
+.letter-meta span{
+  display:block;
+  color:var(--cupid-red);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.letter-meta b{
+  display:block;
+  margin-top:.3rem;
+  line-height:1.4;
+}
+.letter-content-notes{
+  color:#6e3047;
+  line-height:1.55;
+}
+.opened-letter h3{
+  margin:1.4rem 0 .9rem;
+  color:var(--deep-rose);
+  font-family:"Playfair Display",serif;
+  font-size:2rem;
+  font-style:italic;
+}
+.letter-book-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+}
+.letter-book-card{
+  display:grid;
+  gap:.85rem;
+  border:1px solid rgba(201,24,74,.16);
+  border-radius:14px;
+  padding:.75rem;
+  background:rgba(255,253,249,.88);
+  box-shadow:0 18px 34px rgba(74,16,42,.14);
+  transform:rotate(var(--card-tilt));
+}
+.letter-book-card figure{
+  margin:0;
+  border:8px solid #fff;
+  background:#fff;
+  box-shadow:0 10px 22px rgba(74,16,42,.16);
+}
+.letter-book-card img,
+.cover-fallback{
+  width:100%;
+  height:190px;
+  display:grid;
+  place-items:center;
+  object-fit:contain;
+  color:#fff8f8;
+  background:linear-gradient(145deg,var(--deep-rose),var(--berry-ink));
+  font-family:"Playfair Display",serif;
+  font-size:1.4rem;
+  font-style:italic;
+  text-align:center;
+}
+.letter-book-card figcaption{
+  padding:.45rem 0 0;
+  color:var(--cupid-red);
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.letter-book-card h4{
+  margin:0;
+  color:var(--berry-ink);
+  font-family:"Playfair Display",serif;
+  font-size:1.45rem;
+  line-height:1.05;
+}
+.book-author{
+  margin:.2rem 0 .7rem;
+  color:#6e3047;
+  font-weight:800;
+}
+.letter-book-card dl{
+  gap:.55rem;
+}
+.letter-book-card dt{
+  color:var(--cupid-red);
+}
+.letter-book-card dd{
+  color:#5c263e;
+  font-size:.9rem;
+}
+.dark-opened-letter{
+  border-color:rgba(122,0,31,.5);
+  color:var(--silver-ink);
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.02),rgba(255,255,255,.05),rgba(255,255,255,.02)),
+    radial-gradient(circle at 84% 12%,rgba(122,0,31,.22),transparent 12rem),
+    var(--charcoal-paper);
+}
+.dark-opened-letter h2,
+.dark-opened-letter h3,
+.dark-opened-letter .modal-kicker,
+.dark-opened-letter .letter-meta span,
+.dark-opened-letter .letter-book-card dt{
+  color:#ffb0bf;
+}
+.dark-opened-letter .letter-opening,
+.dark-opened-letter .letter-content-notes,
+.dark-opened-letter .book-author,
+.dark-opened-letter dd{
+  color:var(--silver-ink);
+}
+.dark-opened-letter .letter-meta div,
+.dark-opened-letter .letter-content-notes,
+.dark-opened-letter .letter-book-card{
+  border-color:rgba(207,199,199,.18);
+  background:rgba(22,16,22,.62);
+}
+.dark-opened-letter .letter-book-card h4{
+  color:#fff8f8;
+}
+.dark-book-card figure{
+  border-color:#211a1f;
+  background:#211a1f;
+}
+@keyframes letterUnfold{
+  from{opacity:0;transform:translateY(18px) scaleY(.96)}
+  to{opacity:1;transform:translateY(0) scaleY(1)}
+}
+
+.romance-ai-guide{
+  position:fixed;
+  right:1rem;
+  bottom:1rem;
+  z-index:60;
+  display:flex;
+  align-items:center;
+  gap:.65rem;
+}
+.romance-ai-launcher{
+  width:4.2rem;
+  height:4.2rem;
+  border:2px solid rgba(255,248,248,.78);
+  border-radius:50%;
+  color:#fff8f8;
+  background:
+    radial-gradient(circle at 35% 30%,rgba(255,215,225,.55),transparent 1rem),
+    linear-gradient(145deg,var(--rose),var(--wine) 72%,var(--gold));
+  box-shadow:0 18px 42px rgba(74,13,35,.32),0 0 28px rgba(231,84,128,.24);
+  font-family:"Playfair Display",serif;
+  font-weight:900;
+  cursor:pointer;
+}
+.romance-ai-launcher:hover,
+.romance-ai-launcher:focus-visible{
+  outline:none;
+  transform:translateY(-3px);
+  box-shadow:0 24px 52px rgba(74,13,35,.42),0 0 36px rgba(231,84,128,.3);
+}
+.romance-ai-hint{
+  width:min(280px,calc(100vw - 6rem));
+  margin:0;
+  border:1px solid rgba(255,248,248,.34);
+  border-radius:12px;
+  padding:.7rem .8rem;
+  color:#fff8f8;
+  background:rgba(74,13,35,.86);
+  box-shadow:0 16px 36px rgba(74,13,35,.24);
+  font-size:.92rem;
+  line-height:1.25;
+  transition:opacity .2s ease,transform .2s ease;
+}
+.romance-ai-guide.is-open .romance-ai-hint{
+  opacity:0;
+  pointer-events:none;
+  transform:translateX(10px);
+}
+.romance-ai-panel{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  width:min(460px,100vw);
+  display:grid;
+  grid-template-rows:auto 1fr;
+  border-left:1px solid rgba(255,248,248,.22);
+  color:#fff8f8;
+  background:
+    linear-gradient(180deg,rgba(74,13,35,.95),rgba(58,31,43,.98)),
+    url("../Images/romance-midnight-cafe.png") center/cover;
+  box-shadow:-28px 0 70px rgba(74,13,35,.38);
+  transform:translateX(104%);
+  transition:transform .28s ease;
+}
+.romance-ai-guide.is-open .romance-ai-panel{
+  transform:translateX(0);
+}
+.romance-ai-guide.is-open .romance-ai-launcher{
+  opacity:0;
+  pointer-events:none;
+}
+.romance-ai-header{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1.1rem;
+  background:rgba(58,31,43,.86);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,248,248,.18);
+}
+.romance-ai-header h2{
+  margin:.15rem 0 0;
+  color:#fff8f8;
+  font-family:"Playfair Display",serif;
+  font-size:1.9rem;
+  font-style:italic;
+  line-height:1;
+}
+.romance-ai-close{
+  width:2.15rem;
+  height:2.15rem;
+  border:1px solid rgba(255,248,248,.34);
+  border-radius:50%;
+  color:#fff8f8;
+  background:rgba(74,13,35,.86);
+  cursor:pointer;
+}
+.romance-ai-card{
+  align-self:center;
+  margin:1.1rem;
+  border:1px solid rgba(255,248,248,.22);
+  border-radius:16px;
+  padding:1.2rem;
+  color:#fff8f8;
+  background:rgba(74,13,35,.84);
+  box-shadow:0 22px 46px rgba(43,13,24,.3);
+}
+.romance-ai-card p{
+  margin:0 0 1rem;
+  font-size:1.04rem;
+  line-height:1.55;
+}
+.romance-ai-open{
+  display:flex;
+  justify-content:center;
+  border:1px solid rgba(255,248,248,.58);
+  border-radius:999px;
+  padding:.85rem 1rem;
+  color:var(--wine);
+  background:#fff8f8;
+  font-size:.8rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+.romance-ai-card span{
+  display:block;
+  margin-top:.8rem;
+  color:rgba(255,248,248,.72);
+  font-size:.86rem;
+  text-align:center;
+}
+
+@media(max-width:1080px){
+  .cafe-hero,.dating-flyer{grid-template-columns:1fr}
+  .meet-panel,.playlist-panel,.cafe-table-panel,.bad-decisions-panel,.shelf-panel,.simp-profile{grid-column:1 / -1}
+  .desk-scatter{grid-template-columns:repeat(2,minmax(260px,1fr));min-height:auto}
+  .cupid-envelope,
+  .cupid-envelope:nth-child(n),
+  .dark-envelope:nth-child(n){
+    grid-column:auto;
+    align-self:auto;
+  }
+  .letter-book-grid{grid-template-columns:1fr}
+  .letter-meta{grid-template-columns:1fr}
+  .trope-map{min-height:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+  .trope-map::before,.trope-map::after,.map-center{display:none}
+  .trope-node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:auto}
+}
+
+@media(max-width:720px){
+  .romance-shell{width:100%;padding:1rem .8rem 3rem}
+  .cafe-hero{min-height:620px}
+  .hero-copy h1{font-size:3.8rem}
+  .romance-word-cloud span{font-size:.62rem}
+  .romance-word-cloud span:nth-child(n+4){display:none}
+  .hero-silhouettes{width:92vw;height:280px;opacity:.68}
+  .silhouette{width:100px;height:215px}
+  .silhouette::before{width:64px;height:72px;top:-43px}
+  .silhouette-one{left:22%}
+  .silhouette-two{right:22%;height:230px}
+  .romance-grid,.trope-map,.sticky-wall{grid-template-columns:1fr}
+  .table-scene{position:relative;left:auto;right:auto;bottom:auto;height:360px;margin-top:1rem;transform:none}
+  .table-object.coffee{left:3%;top:17%;width:118px;height:118px}
+  .table-object.ticket{left:5%;bottom:11%;width:145px;height:72px}
+  .table-object.letter{left:32%;top:26%;width:142px;height:108px}
+  .table-object.text{right:4%;top:13%;width:92px;height:148px}
+  .table-object.flower{left:56%;bottom:9%;width:182px;height:120px;background-size:470px auto}
+  .table-output{position:relative;left:auto;right:auto;bottom:auto;margin-top:1rem}
+  .match-actions{grid-template-columns:1fr}
+  .cupid-letters-panel{padding:1rem;min-height:0}
+  .desk-scatter{grid-template-columns:1fr}
+  .cupid-envelope{min-height:150px;transform:none}
+  .cupid-envelope:hover,.cupid-envelope:focus-visible{transform:translateY(-4px)}
+  .envelope-address{left:1rem;right:4.7rem;font-size:1.08rem}
+  .postage-stamp{right:.75rem;top:.85rem;width:2.7rem;height:3rem}
+  .wax-seal{width:2.6rem;height:2.6rem}
+  .dark-letter-transition{margin-top:2rem}
+  .opened-letter{padding:1rem}
+  .letter-book-card{transform:none}
+  .letter-book-card img,.cover-fallback{height:170px}
+  .romance-ai-guide{right:.75rem;bottom:.75rem}
+  .romance-ai-hint{display:none}
+  .romance-ai-panel{width:100vw}
+}
+
+/* Romance hero: add breathing room */
+.cafe-hero {
+  min-height: 720px;
+  padding: clamp(2rem, 5vw, 4.5rem);
+}
+
+.hero-copy {
+  max-width: 980px;
+  gap: 1.05rem;
+}
+
+.hero-copy h1 {
+  font-size: clamp(4.2rem, 7vw, 7.2rem);
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+}
+
+.hero-copy p:not(.love-label) {
+  max-width: 720px;
+  margin: 0.2rem 0 0;
+  font-size: clamp(1.45rem, 2.2vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.cafe-button {
+  margin-top: 0.35rem;
+}
+
+/* =========================
+   Reading Match Tarot/Tinder Spread
+   ========================= */
+
+.bottom-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.bottom-grid .match-profile {
+  grid-column: 1 / -1;
+  position: relative;
+  width: 100%;
+  max-width: none;
+  min-height: 690px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 28px;
+  border: 1px solid rgba(255, 248, 244, .72);
+
+  background:
+    linear-gradient(180deg, rgba(255, 248, 244, .88), rgba(255, 236, 239, .72)),
+    url("../Images/romance-midnight-cafe.png") center / cover;
+
+  box-shadow:
+    0 30px 90px rgba(74, 13, 35, .24),
+    inset 0 0 0 1px rgba(255, 255, 255, .42);
+
+  overflow: hidden;
+}
+
+/* top-left app label */
+.match-screen-label {
+  position: absolute;
+  top: 1.35rem;
+  left: 1.6rem;
+  z-index: 8;
+  margin: 0;
+
+  color: var(--rose);
+  font-size: .74rem;
+  font-weight: 900;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+/* fake Mac/app dots */
+.bottom-grid .match-profile::after {
+  content: "●  ●  ●";
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 8;
+
+  color: rgba(74, 13, 35, .34);
+  font-size: .9rem;
+  letter-spacing: .35em;
+}
+
+/* card spread zone */
+.match-card-stack {
+  position: relative;
+  width: min(980px, 94%);
+  height: 520px;
+  margin-top: 1.4rem;
+}
+
+/* all cards */
+.match-card {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 310px;
+  height: 470px;
+
+  border-radius: 28px;
+  border: 7px solid #fff8f4;
+
+  background: linear-gradient(180deg, #7a7879, #1b1b1b);
+  box-shadow:
+    0 28px 60px rgba(74, 13, 35, .26),
+    0 0 0 1px rgba(74, 13, 35, .08);
+
+  overflow: hidden;
+}
+
+/* dummy side cards */
+.dummy-card {
+  display: grid;
+  align-content: end;
+  padding: 1.2rem;
+
+  color: #fff8f4;
+  background:
+    linear-gradient(180deg, rgba(255, 210, 224, .28), rgba(74, 13, 35, .86)),
+    radial-gradient(circle at 50% 34%, rgba(255, 255, 255, .42), transparent 7rem),
+    linear-gradient(145deg, #7a7879, #1b1b1b);
+}
+
+.dummy-card h3 {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 .3rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  line-height: .95;
+}
+
+.dummy-card p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .8;
+}
+
+.dummy-image {
+  position: absolute;
+  inset: 1rem 1rem auto;
+  height: 230px;
+  border-radius: 20px;
+
+  background:
+    radial-gradient(circle at 50% 48%, rgba(255, 255, 255, .72), transparent 5rem),
+    linear-gradient(135deg, rgba(255, 255, 255, .22), transparent),
+    url("../Images/grey heart profile.png") center / cover;
+
+  opacity: .72;
+}
+
+/* spread positions */
+.dummy-left-far {
+  transform: translateX(-500px) rotate(-18deg);
+  z-index: 1;
+  opacity: .88;
+}
+
+.dummy-left {
+  transform: translateX(-345px) rotate(-10deg);
+  z-index: 2;
+  opacity: .94;
+}
+
+.dummy-right {
+  transform: translateX(35px) rotate(10deg);
+  z-index: 2;
+  opacity: .94;
+}
+
+.dummy-right-far {
+  transform: translateX(190px) rotate(18deg);
+  z-index: 1;
+  opacity: .88;
+}
+
+/* main center card */
+.main-card {
+  transform: translateX(-50%) rotate(-1deg);
+  z-index: 5;
+
+  background:
+    linear-gradient(180deg, rgba(255, 210, 224, .08), rgba(74, 13, 35, .9)),
+    #b8325e;
+}
+
+/* main card text */
+.main-card-copy {
+  position: absolute;
+  left: 1.15rem;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  z-index: 4;
+}
+
+.main-card .love-label {
+  margin: 0 0 .3rem;
+  color: rgba(255, 248, 244, .76);
+  font-size: .62rem;
+  letter-spacing: .16em;
+}
+
+.main-card h2 {
+  margin: 0;
+  color: #fff8f4;
+
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  line-height: .86;
+  letter-spacing: -.035em;
+
+  text-shadow: 0 10px 28px rgba(0, 0, 0, .38);
+}
+
+.main-card .profile-line {
+  margin: .4rem 0 .75rem;
+  color: rgba(255, 248, 244, .9);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.15;
+}
+
+.main-card .profile-about {
+  margin: 0;
+  border-radius: 16px;
+  padding: .75rem .85rem;
+
+  background: rgba(255, 248, 244, .9);
+  box-shadow: 0 14px 28px rgba(74, 13, 35, .16);
+}
+
+.main-card .profile-about p {
+  margin: .28rem 0;
+  color: #6e3047;
+  font-size: .78rem;
+  line-height: 1.28;
+}
+.main-card .profile-avatar {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+
+  background:
+    linear-gradient(180deg, rgba(255, 210, 224, .05) 0%, rgba(74, 13, 35, .88) 78%),
+    url("../Images/heartprofile.png") center / cover no-repeat;
+
+  box-shadow: none;
+  transform: none;
+}
+/* buttons under the center card */
+.match-actions {
+  position: absolute;
+  left: 50%;
+  bottom: 3.05rem;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 0;
+  transform: translateX(-50%);
+}
+
+.pass-button,
+.match-button {
+  width: 4.5rem;
+  height: 4.5rem;
+  min-height: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  font-size: 0;
+  cursor: pointer;
+
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.pass-button {
+  border: 2px solid rgba(74, 13, 35, .13);
+  background: #fff8f4;
+  box-shadow: 0 16px 34px rgba(74, 13, 35, .16);
+}
+
+.pass-button::before {
+  content: "×";
+  color: #6e3047;
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.match-button {
+  width: 5.3rem;
+  height: 5.3rem;
+
+  border: 2px solid rgba(255, 248, 244, .92);
+  background: linear-gradient(135deg, #ff4f7b, #c9184a, #7a001f);
+  box-shadow:
+    0 20px 42px rgba(201, 24, 74, .38),
+    0 0 36px rgba(255, 79, 123, .28);
+}
+
+/* bigger heart */
+.match-button::before {
+  content: "♥";
+  color: #fff8f4;
+  font-size: 3.35rem;
+  line-height: 1;
+  transform: translateY(3px);
+}
+
+.pass-button:hover,
+.match-button:hover {
+  transform: translateY(-5px) scale(1.07);
+}
+
+.continue-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 1.75rem;
+  z-index: 10;
+
+  margin: 0;
+  transform: translateX(-50%);
+
+  color: var(--wine);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+}
+
+.profile-response {
+  position: absolute;
+  left: 50%;
+  bottom: .7rem;
+  z-index: 10;
+
+  width: min(420px, 88vw);
+  margin: 0;
+  transform: translateX(-50%);
+
+  color: var(--wine);
+  font-size: .78rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* animations */
+.match-profile.is-passing .main-card {
+  animation: passSwipe .42s ease both;
+}
+
+.match-profile.is-matched .main-card {
+  animation: matchPulse .52s ease both;
+}
+
+@keyframes passSwipe {
+  0%, 100% {
+    transform: translateX(-50%) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateX(-70%) rotate(-10deg);
+    opacity: .78;
+  }
+}
+
+@keyframes matchPulse {
+  0%, 100% {
+    transform: translateX(-50%) rotate(-1deg) scale(1);
+  }
+
+  45% {
+    transform: translateX(-50%) rotate(1deg) scale(1.045);
+  }
+}
+
+@media (max-width: 900px) {
+  .dummy-left-far,
+  .dummy-right-far {
+    display: none;
+  }
+
+  .dummy-left {
+    transform: translateX(-285px) rotate(-10deg);
+  }
+
+  .dummy-right {
+    transform: translateX(-25px) rotate(10deg);
+  }
+}
+
+@media (max-width: 720px) {
+  .bottom-grid .match-profile {
+    min-height: 640px;
+  }
+
+  .match-card-stack {
+    width: 100%;
+    height: 500px;
+  }
+
+  .match-card {
+    width: 280px;
+    height: 430px;
+  }
+
+  .dummy-card {
+    opacity: .5;
+  }
+
+  .dummy-left {
+    transform: translateX(-245px) rotate(-10deg);
+  }
+
+  .dummy-right {
+    transform: translateX(-35px) rotate(10deg);
+  }
+
+  .main-card h2 {
+    font-size: 2.45rem;
+  }
+}

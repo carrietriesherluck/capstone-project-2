@@ -1,0 +1,710 @@
+:root{
+  --paper:#f2efe8;
+  --paper-2:#fffaf0;
+  --ink:#1b1b1b;
+  --blue:#273043;
+  --brass:#9a7e52;
+  --muted:#5c5a55;
+  --shadow:rgba(20,22,26,.22);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body.investigation-page{
+  min-height:100vh;
+  margin:0;
+  color:#f2efe8;
+  background:
+    radial-gradient(circle at 14% 5%,rgba(154,126,82,.22),transparent 24rem),
+    radial-gradient(circle at 85% 18%,rgba(75,93,128,.22),transparent 28rem),
+    linear-gradient(180deg,#101724 0%,#182233 30%,#273043 58%,#111722 100%);
+  font-family:Inter,sans-serif;
+  overflow-x:hidden;
+}
+
+body.investigation-page::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(242,239,232,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(242,239,232,.035) 1px,transparent 1px);
+  background-size:34px 34px;
+}
+
+.investigation-nav{
+  background:rgba(16,23,36,.78);
+  border-bottom:1px solid rgba(242,239,232,.13);
+  backdrop-filter:blur(18px);
+}
+.investigation-nav a{color:#f8f2e8}
+.investigation-nav .nav-links a{color:rgba(248,242,232,.72)}
+
+.investigation-shell{
+  width:min(1340px,calc(100% - 2rem));
+  margin:0 auto;
+  padding:7rem 0 4rem;
+}
+
+.investigation-hero{
+  position:relative;
+  min-height:720px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 340px;
+  gap:1rem;
+  align-items:end;
+  overflow:hidden;
+  border:1px solid rgba(39,48,67,.18);
+  border-radius:22px;
+  padding:clamp(1.5rem,4vw,3rem);
+  background:
+    linear-gradient(90deg,rgba(27,27,27,.68),rgba(39,48,67,.25) 48%,rgba(242,239,232,.08)),
+    url("../Images/investigation-hero-desk.png") center/cover;
+  box-shadow:0 30px 90px rgba(20,22,26,.22);
+}
+
+.hero-copy{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  color:#f8f2e8;
+}
+
+.case-label{
+  margin:0 0 .75rem;
+  color:var(--brass);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.hero-copy h1{
+  margin:0;
+  font-family:"Libre Baskerville",serif;
+  font-size:clamp(3.4rem,6.6vw,7rem);
+  line-height:.88;
+  letter-spacing:-.035em;
+  text-transform:uppercase;
+  text-shadow:0 18px 46px rgba(0,0,0,.48);
+}
+
+.hero-copy p:not(.case-label){
+  max-width:560px;
+  color:rgba(248,242,232,.88);
+  font-family:"Libre Baskerville",serif;
+  font-size:clamp(1.2rem,2vw,2rem);
+  line-height:1.35;
+}
+
+.case-button{
+  display:inline-flex;
+  width:max-content;
+  margin-top:1rem;
+  border:1px solid rgba(242,239,232,.52);
+  border-radius:999px;
+  padding:.82rem 1rem;
+  color:#f8f2e8;
+  background:linear-gradient(135deg,#273043,#111722);
+  box-shadow:0 18px 34px rgba(0,0,0,.22);
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+
+.night-status{
+  position:relative;
+  z-index:2;
+  align-self:start;
+  margin-top:1rem;
+  border:1px solid rgba(242,239,232,.26);
+  border-radius:14px;
+  padding:1rem;
+  color:#f8f2e8;
+  background:rgba(17,23,34,.64);
+  box-shadow:0 18px 44px rgba(0,0,0,.24);
+  backdrop-filter:blur(14px);
+}
+.night-status p,.night-status strong,.night-status span,.night-status em{display:block}
+.night-status p{margin:0;color:var(--brass);font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.night-status strong{margin:.2rem 0;font-size:2.2rem}
+.night-status span{color:rgba(248,242,232,.74);font-size:.82rem}
+.night-status em{margin-top:1rem;color:#ddd0bb;line-height:1.5}
+
+.case-board,
+.investigation-panel{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(39,48,67,.18);
+  border-radius:18px;
+  background:rgba(242,239,232,.82);
+  box-shadow:0 24px 70px rgba(20,22,26,.15);
+}
+
+.case-board{
+  min-height:760px;
+  margin-top:1rem;
+  padding:clamp(1.25rem,3vw,2rem);
+  background:
+    linear-gradient(180deg,rgba(242,239,232,.26),rgba(27,27,27,.2)),
+    url("../Images/investigation-case-archive.png") center/cover;
+}
+
+.section-heading{
+  position:relative;
+  z-index:2;
+  width:max-content;
+  max-width:min(760px,100%);
+  border-left:3px solid var(--brass);
+  border-radius:8px;
+  padding:.8rem 1rem;
+  background:linear-gradient(90deg,rgba(242,239,232,.9),rgba(242,239,232,.55));
+  box-shadow:0 14px 30px rgba(20,22,26,.16);
+}
+
+.section-heading h2,
+.investigation-panel h2,
+.detective-profile h2{
+  margin:.2rem 0 0;
+  color:var(--blue);
+  font-family:"Libre Baskerville",serif;
+  font-size:clamp(1.7rem,3vw,3.35rem);
+  line-height:1;
+}
+
+.case-files{
+  position:absolute;
+  left:5%;
+  right:5%;
+  top:210px;
+  bottom:5%;
+  z-index:2;
+  min-height:500px;
+}
+
+.case-file{
+  position:absolute;
+  width:min(260px,23%);
+  min-height:410px;
+  border:1px solid rgba(39,48,67,.18);
+  border-radius:10px 10px 4px 4px;
+  padding:1.15rem 1rem 1rem;
+  color:#1b1b1b;
+  background:
+    linear-gradient(180deg,rgba(255,250,240,.94),rgba(225,206,161,.98)),
+    repeating-linear-gradient(0deg,transparent 0 28px,rgba(39,48,67,.055) 29px);
+  box-shadow:12px 16px 0 rgba(39,48,67,.16),0 28px 46px rgba(20,22,26,.24);
+  cursor:pointer;
+  text-align:left;
+  transform:translateY(var(--lift)) rotate(var(--tilt));
+  transition:transform .22s ease,box-shadow .22s ease,z-index .22s ease;
+}
+.case-file::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:18%;
+  top:-24px;
+  height:34px;
+  border-radius:10px 16px 0 0;
+  background:#d8bd78;
+  box-shadow:0 -1px 0 rgba(39,48,67,.16) inset;
+}
+.case-file::after{
+  content:"";
+  position:absolute;
+  inset:.55rem;
+  border:1px solid rgba(39,48,67,.08);
+  border-radius:7px;
+  pointer-events:none;
+}
+.case-tab{
+  position:absolute;
+  top:-18px;
+  left:.8rem;
+  z-index:3;
+  color:#273043!important;
+  font-size:.62rem!important;
+  letter-spacing:.08em!important;
+}
+.cover-pin{
+  position:absolute;
+  left:50%;
+  top:.55rem;
+  z-index:3;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#fff8e8,#9a7e52 70%);
+  box-shadow:0 4px 8px rgba(20,22,26,.2);
+}
+.case-file img{
+  width:100%;
+  height:215px;
+  display:block;
+  margin:0 0 .8rem;
+  border:8px solid #fffaf0;
+  border-radius:4px;
+  object-fit:contain;
+  background:#111722;
+  box-shadow:0 10px 18px rgba(20,22,26,.18);
+}
+.case-file:hover,.case-file:focus-visible{
+  outline:none;
+  z-index:8;
+  transform:translateY(calc(var(--lift) - 18px)) rotate(var(--tilt)) scale(1.03);
+  box-shadow:8px 12px 0 rgba(39,48,67,.2),0 34px 50px rgba(20,22,26,.26);
+}
+.case-file span{
+  display:block;
+  color:var(--brass);
+  font-size:.75rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.case-file strong{
+  display:block;
+  margin:.8rem 0;
+  color:var(--blue);
+  font-family:"Libre Baskerville",serif;
+  font-size:1.25rem;
+  line-height:1.08;
+}
+.case-file em{
+  display:block;
+  color:var(--muted);
+  font-size:.86rem;
+  line-height:1.45;
+}
+.case-file small{
+  display:block;
+  margin-top:.8rem;
+  color:var(--blue);
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.investigation-grid,
+.evidence-profile-grid{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+
+.playlist-panel{
+  grid-column:1 / span 6;
+  min-height:560px;
+  padding:clamp(1.3rem,3vw,2rem);
+  background:
+    linear-gradient(180deg,rgba(242,239,232,.88),rgba(39,48,67,.2)),
+    url("../Images/timeline background.png") center/cover;
+}
+.playlist-panel iframe{
+  margin-top:1rem;
+  border:0;
+  border-radius:12px;
+  filter:saturate(.75) contrast(1.05);
+}
+.panel-note{
+  max-width:520px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.open-cases-panel{
+  grid-column:7 / -1;
+  min-height:560px;
+  padding:clamp(1.3rem,3vw,2rem);
+  background:
+    linear-gradient(180deg,rgba(242,239,232,.9),rgba(39,48,67,.1)),
+    url("../Images/background.jpg") center/cover;
+}
+.case-tabs{
+  display:grid;
+  gap:.75rem;
+  margin-top:1.2rem;
+}
+.case-tabs button{
+  border:1px solid rgba(39,48,67,.14);
+  border-radius:999px;
+  padding:.8rem 1rem;
+  color:var(--blue);
+  background:rgba(255,250,240,.78);
+  font-weight:800;
+  text-align:left;
+  cursor:pointer;
+}
+.case-tabs button:hover,.case-tabs button:focus-visible{
+  outline:none;
+  background:#fffaf0;
+  box-shadow:0 12px 24px rgba(20,22,26,.12);
+}
+.case-tabs button.is-active{
+  color:#f8f2e8;
+  background:#2f3b52;
+  box-shadow:0 14px 28px rgba(20,22,26,.18);
+}
+.tab-output{
+  margin-top:1rem;
+  min-height:170px;
+  border-left:3px solid var(--brass);
+  padding:1rem 1.05rem;
+  color:#f8f2e8;
+  background:rgba(39,48,67,.88);
+  font-family:"Libre Baskerville",serif;
+  font-size:1rem;
+  line-height:1.75;
+}
+
+.evidence-panel{
+  grid-column:1 / span 7;
+  min-height:640px;
+  padding:clamp(1.25rem,3vw,2rem);
+  background:
+    linear-gradient(180deg,rgba(242,239,232,.2),rgba(39,48,67,.16)),
+    url("../Images/investigation-evidence-locker.png") center/cover;
+}
+
+.evidence-desk{
+  position:absolute;
+  left:6%;
+  right:6%;
+  bottom:15%;
+  height:330px;
+}
+.evidence{
+  position:absolute;
+  border:0;
+  color:transparent;
+  background:transparent;
+  cursor:pointer;
+  filter:drop-shadow(0 16px 18px rgba(0,0,0,.26));
+}
+.evidence span{
+  position:absolute;
+  left:50%;
+  top:100%;
+  transform:translateX(-50%);
+  margin-top:.35rem;
+  border-radius:999px;
+  padding:.28rem .45rem;
+  color:#f8f2e8;
+  background:rgba(39,48,67,.84);
+  font-size:.62rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:0;
+  white-space:nowrap;
+}
+.evidence:hover span,.evidence:focus-visible span{opacity:1}
+.evidence.key{left:6%;top:45%;width:165px;height:104px;background:url("../Images/mystery key.png") center/contain no-repeat}
+.evidence.notebook{left:28%;top:20%;width:205px;height:172px;background:url("../Images/mystery notebook.png") center/contain no-repeat;transform:rotate(-4deg)}
+.evidence.photo{right:25%;top:17%;width:170px;height:140px;background:url("../Images/solving a mystery.jpg") center/cover;border:9px solid #fffaf0;transform:rotate(5deg)}
+.evidence.letter{right:4%;top:36%;width:210px;height:150px;background:url("../Images/actual mystery letter.png") center/contain no-repeat;transform:rotate(-5deg)}
+.evidence.ticket{left:43%;bottom:0;width:190px;height:86px;background:url("../Images/ticket.png") center/contain no-repeat;transform:rotate(4deg)}
+
+.evidence-output{
+  position:absolute;
+  left:6%;
+  right:6%;
+  bottom:6%;
+  margin:0;
+  border-left:3px solid var(--brass);
+  padding:.8rem 1rem;
+  color:#f8f2e8;
+  background:rgba(39,48,67,.9);
+  line-height:1.55;
+}
+
+.detective-profile{
+  grid-column:8 / -1;
+  min-height:640px;
+  padding:clamp(1.4rem,3vw,2.1rem);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(154,126,82,.18),transparent 14rem),
+    linear-gradient(145deg,#f7f1e6,#d7c9ac);
+}
+.profile-mark{
+  width:118px;
+  height:118px;
+  margin:0 0 1.4rem;
+  border:2px solid rgba(39,48,67,.22);
+  border-radius:50%;
+  background:
+    linear-gradient(145deg,rgba(39,48,67,.65),rgba(17,23,34,.9)),
+    url("../Images/10. mystery.jpg") center/cover;
+  background-blend-mode:multiply,normal;
+  box-shadow:0 18px 40px rgba(20,22,26,.18);
+}
+.profile-line{
+  margin-top:.4rem;
+  color:var(--muted);
+  font-family:"Libre Baskerville",serif;
+  font-size:1.35rem;
+  line-height:1.35;
+}
+.profile-stats{
+  display:flex;
+  gap:1rem;
+  border-top:1px solid rgba(39,48,67,.12);
+  border-bottom:1px solid rgba(39,48,67,.12);
+  padding:.8rem 0;
+  color:var(--brass);
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.profile-about p{
+  color:var(--muted);
+  line-height:1.75;
+}
+.case-button.secondary{
+  margin-top:auto;
+  color:#f8f2e8;
+  background:var(--blue);
+}
+
+.case-dialog{
+  width:min(900px,calc(100vw - 2rem));
+  max-height:calc(100vh - 2rem);
+  margin:auto;
+  border:1px solid rgba(39,48,67,.22);
+  border-radius:16px;
+  padding:0;
+  color:var(--ink);
+  background:#f2efe8;
+  box-shadow:0 34px 100px rgba(0,0,0,.36);
+  overflow:auto;
+}
+.case-dialog::backdrop{background:rgba(17,23,34,.66);backdrop-filter:blur(8px)}
+.close-case{
+  position:absolute;
+  right:1rem;
+  top:1rem;
+  z-index:3;
+  width:2rem;
+  height:2rem;
+  border:1px solid rgba(39,48,67,.18);
+  border-radius:50%;
+  color:#f8f2e8;
+  background:var(--blue);
+  cursor:pointer;
+}
+.case-dialog-layout{
+  display:grid;
+  grid-template-columns:290px 1fr;
+  gap:1.25rem;
+  padding:1.25rem;
+}
+.case-folder{
+  min-height:380px;
+  margin:0;
+  display:grid;
+  grid-template-rows:1fr auto;
+  overflow:hidden;
+  border-radius:10px 10px 4px 4px;
+  padding:0;
+  color:var(--blue);
+  background:#d9c597;
+  box-shadow:10px 12px 0 rgba(39,48,67,.16),0 24px 42px rgba(20,22,26,.18);
+}
+.case-folder img{
+  width:100%;
+  height:100%;
+  min-height:340px;
+  display:block;
+  object-fit:cover;
+}
+.case-folder figcaption{
+  margin:0;
+  padding:.8rem .9rem;
+  color:#f8f2e8;
+  background:linear-gradient(90deg,#273043,#111722);
+  font-family:"Libre Baskerville",serif;
+  font-size:.92rem;
+  font-weight:700;
+  line-height:1.25;
+}
+.case-copy h2{
+  margin:.2rem 0 1rem;
+  color:var(--blue);
+  font-family:"Libre Baskerville",serif;
+  font-size:clamp(2rem,4vw,4rem);
+  line-height:.95;
+}
+.case-copy h3{
+  margin:1rem 0 .35rem;
+  color:var(--brass);
+  font-size:.76rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.case-copy p,.case-copy li{color:var(--muted);line-height:1.65}
+
+.mystery-ai-guide{
+  position:fixed;
+  right:1rem;
+  bottom:1rem;
+  z-index:60;
+  display:flex;
+  align-items:center;
+  gap:.65rem;
+}
+.mystery-ai-launcher{
+  width:4.2rem;
+  height:4.2rem;
+  border:2px solid rgba(242,239,232,.68);
+  border-radius:50%;
+  color:#f8f2e8;
+  background:
+    radial-gradient(circle at 35% 30%,rgba(154,126,82,.5),transparent 1rem),
+    linear-gradient(145deg,#273043,#111722 72%,#9a7e52);
+  box-shadow:0 18px 42px rgba(20,22,26,.38),0 0 28px rgba(154,126,82,.24);
+  font-family:"Libre Baskerville",serif;
+  font-weight:700;
+  cursor:pointer;
+}
+.mystery-ai-launcher:hover,
+.mystery-ai-launcher:focus-visible{
+  outline:none;
+  transform:translateY(-3px);
+  box-shadow:0 24px 52px rgba(20,22,26,.46),0 0 36px rgba(154,126,82,.3);
+}
+.mystery-ai-hint{
+  width:min(280px,calc(100vw - 6rem));
+  margin:0;
+  border:1px solid rgba(242,239,232,.26);
+  border-radius:12px;
+  padding:.7rem .8rem;
+  color:#f8f2e8;
+  background:rgba(17,23,34,.86);
+  box-shadow:0 16px 36px rgba(20,22,26,.28);
+  font-size:.92rem;
+  line-height:1.25;
+  transition:opacity .2s ease,transform .2s ease;
+}
+.mystery-ai-guide.is-open .mystery-ai-hint{
+  opacity:0;
+  pointer-events:none;
+  transform:translateX(10px);
+}
+.mystery-ai-panel{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  width:min(460px,100vw);
+  display:grid;
+  grid-template-rows:auto 1fr;
+  border-left:1px solid rgba(242,239,232,.18);
+  color:#f8f2e8;
+  background:
+    linear-gradient(180deg,rgba(17,23,34,.95),rgba(12,17,26,.98)),
+    url("../Images/investigation-case-archive.png") center/cover;
+  box-shadow:-28px 0 70px rgba(20,22,26,.42);
+  transform:translateX(104%);
+  transition:transform .28s ease;
+}
+.mystery-ai-guide.is-open .mystery-ai-panel{
+  transform:translateX(0);
+}
+.mystery-ai-guide.is-open .mystery-ai-launcher{
+  opacity:0;
+  pointer-events:none;
+}
+.mystery-ai-header{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1.1rem;
+  background:rgba(17,23,34,.86);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(242,239,232,.16);
+}
+.mystery-ai-header h2{
+  margin:.15rem 0 0;
+  color:#f8f2e8;
+  font-family:"Libre Baskerville",serif;
+  font-size:1.75rem;
+  line-height:1;
+}
+.mystery-ai-close{
+  width:2.15rem;
+  height:2.15rem;
+  border:1px solid rgba(242,239,232,.28);
+  border-radius:50%;
+  color:#f8f2e8;
+  background:rgba(39,48,67,.86);
+  cursor:pointer;
+}
+.mystery-ai-card{
+  align-self:center;
+  margin:1.1rem;
+  border:1px solid rgba(242,239,232,.18);
+  border-radius:16px;
+  padding:1.2rem;
+  color:#f8f2e8;
+  background:rgba(17,23,34,.82);
+  box-shadow:0 22px 46px rgba(20,22,26,.34);
+}
+.mystery-ai-card p{
+  margin:0 0 1rem;
+  font-size:1.04rem;
+  line-height:1.55;
+}
+.mystery-ai-open{
+  display:flex;
+  justify-content:center;
+  border:1px solid rgba(242,239,232,.5);
+  border-radius:999px;
+  padding:.85rem 1rem;
+  color:#111722;
+  background:#f2efe8;
+  font-size:.8rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+.mystery-ai-card span{
+  display:block;
+  margin-top:.8rem;
+  color:rgba(242,239,232,.7);
+  font-size:.86rem;
+  text-align:center;
+}
+
+@media(max-width:1080px){
+  .investigation-hero,.case-dialog-layout{grid-template-columns:1fr}
+  .case-files{position:relative;left:auto;right:auto;top:auto;bottom:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;min-height:0;margin-top:2rem}
+  .case-file{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;width:auto;transform:rotate(var(--tilt))}
+  .case-file:hover,.case-file:focus-visible{transform:translateY(-12px) rotate(var(--tilt))}
+  .playlist-panel,.open-cases-panel,.evidence-panel,.detective-profile{grid-column:1 / -1}
+}
+
+@media(max-width:720px){
+  .investigation-shell{width:100%;padding:6rem .8rem 3rem}
+  .investigation-hero{min-height:620px}
+  .hero-copy h1{font-size:3.6rem}
+  .case-files{grid-template-columns:1fr}
+  .evidence-desk{position:relative;left:auto;right:auto;bottom:auto;height:360px;margin-top:1rem}
+  .evidence-output{position:relative;left:auto;right:auto;bottom:auto;margin-top:1rem}
+  .mystery-ai-guide{right:.75rem;bottom:.75rem}
+  .mystery-ai-hint{display:none}
+  .mystery-ai-panel{width:100vw}
+}

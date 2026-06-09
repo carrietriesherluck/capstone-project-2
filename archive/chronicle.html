@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Chronicle | Fantasy Reading World</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./chronicle.css">
+</head>
+<body class="chronicle-page">
+  <nav class="chronicle-nav">
+    <a class="logo" href="../index.html">AP Capstone Project</a>
+    <div class="nav-links">
+      <a href="./demo.html">Back to Quiz</a>
+      <a href="./chronicle.html">Fantasy</a>
+      <a href="./investigation.html">Mystery</a>
+      <a href="./romance.html">Romance</a>
+      <a href="./observatory.html">Observatory</a>
+    </div>
+  </nav>
+
+  <main class="chronicle-shell">
+    <section class="chronicle-hero">
+      <div class="hero-crest" aria-hidden="true"></div>
+      <p class="rune-label">fantasy fiction world</p>
+      <h1>The Chronicle</h1>
+      <p class="hero-line">for those who wander through forgotten realms and measure time in chapters</p>
+      <a class="scroll-link" href="#bookshelf">enter the tower</a>
+    </section>
+
+    <section class="world-panel bookshelf-panel" id="bookshelf">
+      <div class="panel-heading">
+        <p class="rune-label">the grand bookshelf</p>
+        <h2>legendary tomes, recently unearthed</h2>
+      </div>
+      <div class="grand-bookshelf" data-bookshelf></div>
+    </section>
+
+    <section class="world-grid">
+      <article class="world-panel desk-panel">
+        <div class="panel-heading compact">
+          <p class="rune-label">the scholar's desk</p>
+          <h2>traveler's lore</h2>
+        </div>
+        <div class="artifact-desk" data-artifact-desk>
+          <button class="artifact tankard" type="button" data-lore="The tavern keeper says every quest begins with courage, but most begin with someone pretending not to be afraid."><span>tankard</span></button>
+          <button class="artifact parchment" type="button" data-lore="The parchment rewrites itself: choose the road that makes the map tremble."><span>rolled parchment</span></button>
+          <button class="artifact key" type="button" data-lore="Some doors open only for readers willing to enter a stranger world than the one they left."><span>iron key</span></button>
+          <button class="artifact coins" type="button" data-lore="Elven coins buy passage, but loyalty is the only currency that survives the final chapter."><span>elven coins</span></button>
+          <button class="artifact journal" type="button" data-lore="The journal records what heroes forget: wonder is also a form of evidence."><span>leather journal</span></button>
+        </div>
+        <p class="lore-output" data-lore-output>Click an artifact on the desk.</p>
+      </article>
+
+      <article class="world-panel playlist-panel">
+        <p class="rune-label">currently playing</p>
+        <h2>soundtrack for an epic journey</h2>
+        <iframe src="https://open.spotify.com/embed/playlist/6yIfxGFCjeoQ73u7Y4xAYX?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Fantasy journey playlist"></iframe>
+      </article>
+    </section>
+
+    <section class="world-grid lower-grid">
+      <article class="world-panel guild-panel">
+        <p class="rune-label">adventurer's guild log</p>
+        <h2>official quest board</h2>
+        <div class="guild-contract">
+          <h3>Adventurer's Guild Contract</h3>
+          <p><span>☑</span> Slew a fictional dragon</p>
+          <p><span>☑</span> Found another 800-page trilogy</p>
+          <p><span>☑</span> Said "one more chapter" and lied</p>
+          <p><span>☑</span> Memorized a fictional magic system</p>
+          <p><span>☐</span> Emotionally recovered from a character death</p>
+        </div>
+      </article>
+
+      <article class="world-panel wanderer-panel">
+        <div class="map-emblem" aria-hidden="true"></div>
+        <p class="rune-label">the bard's chronicle</p>
+        <h2>The Wanderer</h2>
+        <p class="wanderer-line">tales of forgotten kingdoms, magic systems, and worlds that hold you captive</p>
+        <div class="wanderer-stats">
+          <span>1 apprentice</span>
+          <span>∞ quests</span>
+        </div>
+        <div class="wanderer-about">
+          <p>Drawn to grand scales and intimate emotions in worlds not our own.</p>
+          <p>Currently searching for the ultimate magic system. You read for the feeling that a book contains a world you can disappear into completely.</p>
+        </div>
+        <a class="scroll-link dark" href="../readit/">enter the reading feed</a>
+      </article>
+    </section>
+  </main>
+
+  <aside class="ai-guide" data-ai-guide aria-label="AI reading guide">
+    <button class="ai-guide-launcher" type="button" data-ai-guide-toggle aria-expanded="false" aria-controls="ai-guide-panel">
+      <span aria-hidden="true">AI</span>
+    </button>
+    <p class="ai-guide-hint">Ask the realm guide to help you go deeper into the text.</p>
+    <section class="ai-guide-panel" id="ai-guide-panel" aria-hidden="true">
+      <div class="ai-guide-header">
+        <div>
+          <p class="rune-label">enchanted reading guide</p>
+          <h2>Talk to the text</h2>
+        </div>
+        <button class="ai-guide-close" type="button" data-ai-guide-close aria-label="Close AI guide">×</button>
+      </div>
+      <div class="ai-guide-launch-card">
+        <p>Flint opens in its own secure page. Use it to ask questions, unpack scenes, trace world-building, and think more deeply about the fantasy text.</p>
+        <a class="ai-guide-open" href="https://app.flintk12.com/activities/fantasy-book-re-795c71/sessions/new">Open AI Guide</a>
+        <span>Opens in this tab.</span>
+      </div>
+    </section>
+  </aside>
+
+  <dialog class="tome-dialog" data-tome-dialog aria-labelledby="tome-title">
+    <button class="close-tome" type="button" data-close-tome aria-label="Close tome">×</button>
+    <div class="tome-layout">
+      <figure class="tome-cover">
+        <img src="" alt="" data-tome-image>
+        <figcaption data-tome-cover></figcaption>
+      </figure>
+      <div class="tome-copy">
+        <p class="rune-label">royal decree / shelf note</p>
+        <h2 id="tome-title" data-tome-title></h2>
+        <p data-tome-synopsis></p>
+        <h3>Why you'll stay in this realm</h3>
+        <ul data-tome-reasons></ul>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="./chronicle.js"></script>
+</body>
+</html>

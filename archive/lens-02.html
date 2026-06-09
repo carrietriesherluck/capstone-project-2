@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Biological Neurological Lens | Unscripted Archive</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=IM+Fell+English:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./lens-02.css">
+  <link rel="stylesheet" href="./lens-pager.css">
+</head>
+
+<body class="bio-lens-page">
+  <nav>
+    <a class="logo" href="../index.html">AP Capstone Project</a>
+
+    <div class="nav-links">
+      <a href="./archive.html">Lens 01</a>
+      <a href="./lens-02.html">Lens 02</a>
+      <a href="./lens-03.html">Lens 03</a>
+      <a href="./lens-04.html">Lens 04</a>
+      <a href="./exhibit.html">Overview</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="bio-hero" aria-labelledby="bio-title">
+      <div class="neural-bg neural-bg-one" aria-hidden="true"></div>
+      <div class="neural-bg neural-bg-two" aria-hidden="true"></div>
+      <div class="floating-word neural-word-one">FOCUS</div>
+      <div class="floating-word neural-word-two">SIGNAL</div>
+
+      <div class="bio-hero-inner">
+        <p class="small-label">Research Lens 02 / Attention &amp; The Brain</p>
+        <h1 id="bio-title">Biological / Neurological Lens</h1>
+        <p class="bio-one-liner">
+          Before reading becomes a habit, the brain has to win a tiny battle for attention.
+        </p>
+      </div>
+    </section>
+
+    <section class="lens-claim-section" id="lens-research-claim" aria-labelledby="claim-title">
+      <div class="attention-thesis hero-claim">
+        <p class="small-label">Research Claim</p>
+        <h2 id="claim-title">Social media is shrinking the attention conditions that reading depends on.</h2>
+        <p>
+          Reading is declining not only because books compete with screens, but because endless scrolling changes what the brain finds rewarding. When attention becomes fragmented, a slow page begins to feel boring before the story has a chance to become meaningful.
+        </p>
+        <div class="attention-bridge">
+          <span>Short-form feed</span>
+          <b aria-hidden="true">&rarr;</b>
+          <span>Reduced sustained attention</span>
+          <b aria-hidden="true">&rarr;</b>
+          <span>Reading feels harder</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="distraction-lab" id="attention-hook" aria-labelledby="hook-title">
+      <div class="lab-shell">
+        <div class="lab-intro" data-panel="intro">
+          <p class="small-label">Part 01</p>
+          <h2 id="hook-title">The Distraction Hook</h2>
+          <div class="hook-instructions">
+            <span>Instructions</span>
+            <p>
+              Press Start, read the story in 15 seconds, ignore the popups, then answer the plot questions from memory.
+            </p>
+          </div>
+          <button class="start-lab-button" type="button" data-start-lab>
+            <span>Start</span>
+            <b aria-hidden="true">&rarr;</b>
+          </button>
+        </div>
+
+        <div class="reading-stage is-hidden" data-panel="reading" aria-live="polite">
+          <div class="reading-status">
+            <div>
+              <span>Read this before the clock empties</span>
+              <em>Remember the plot details. The text disappears when time runs out.</em>
+            </div>
+            <strong><b data-timer>15</b><small>sec</small></strong>
+          </div>
+          <p class="reading-passage">
+            Milo found a tiny silver key inside a borrowed library book. The note beside it said, "Return this to the clock tower before moonrise." He followed the old city bells to a hidden room, where a moth-winged map unfolded across the wall. The key opened a drawer full of seeds that glowed like stars. Milo planted one in the courtyard, and by morning the school had grown a tree whose leaves whispered forgotten stories to anyone patient enough to listen.
+          </p>
+          <div class="timer-track" aria-hidden="true">
+            <span data-timer-bar></span>
+          </div>
+          <div class="notification-layer" data-notification-layer aria-hidden="true"></div>
+          <audio data-espresso-audio src="../music/Espresso.mp3#t=8" preload="auto" loop></audio>
+        </div>
+
+        <div class="quiz-stage is-hidden" data-panel="quiz">
+          <p class="small-label">Recall Check</p>
+          <h2>What actually happened?</h2>
+          <div class="quiz-grid" data-quiz></div>
+          <div class="quiz-result is-hidden" data-result aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brain-loop-section eye-lab-section" aria-labelledby="eye-lab-title">
+      <div class="section-heading">
+        <p class="small-label">Part 02</p>
+        <h2 id="eye-lab-title">Skimming vs Deep Reading</h2>
+        <p>
+          Two reading behaviors can feel equally productive, but the brain stores them very differently.
+        </p>
+      </div>
+
+      <div class="eye-compare-grid" data-eye-demo>
+        <article class="eye-panel skimming-panel" data-eye-side="skim">
+          <header>
+            <h3>Skimming</h3>
+            <p class="side-subtitle">Fast. Stimulating. Fragmented.</p>
+            <p class="side-research-label">Eye movements driven by visual anchors rather than linguistic meaning.</p>
+          </header>
+
+          <div class="experience-surface">
+            <div class="fake-reel-phone" aria-label="Fake short-video feed">
+              <div class="reel-topbar">
+                <span>Reels</span>
+                <b>LIVE</b>
+              </div>
+              <div class="reel-feed">
+                <section class="reel-card reel-one">
+                  <span class="reel-badge">FOR YOU</span>
+                  <h4>POV: 10 facts that feel illegal to know</h4>
+                  <p>Fact 7 will rewire your productivity era.</p>
+                </section>
+                <section class="reel-card reel-two">
+                  <span class="reel-badge">TRENDING</span>
+                  <h4>Subway focus loop + study hack</h4>
+                  <p>Read faster by never reading the whole thing.</p>
+                </section>
+                <section class="reel-card reel-three">
+                  <span class="reel-badge">WATCH NEXT</span>
+                  <h4>Fake millionaire morning routine</h4>
+                  <p>Cold shower. Notes app. Dramatic coffee pour.</p>
+                </section>
+                <section class="reel-card reel-four">
+                  <span class="reel-badge">NEW</span>
+                  <h4>Ranking books by cover color only</h4>
+                  <p>Instant opinions. Zero plot required.</p>
+                </section>
+              </div>
+              <div class="reel-actions" aria-hidden="true">
+                <span>99k</span>
+                <span>4.2k</span>
+                <span>Share</span>
+              </div>
+              <div class="novelty-tags" aria-hidden="true">
+                <span>NEW</span>
+                <span>TRENDING</span>
+                <span>WATCH NEXT</span>
+                <span>FOR YOU</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="eye-report" data-eye-report aria-hidden="true">
+            <div class="report-window">
+              <p class="small-label">Eye Movement Report</p>
+              <h4>Scanning Pattern</h4>
+              <svg class="gaze-map skim-map" viewBox="0 0 420 240" aria-hidden="true">
+                <defs>
+                  <marker id="skim-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M0 0 L10 5 L0 10 z"></path>
+                  </marker>
+                </defs>
+                <path class="gaze-path f-path" d="M54 45 H330 M58 45 V190 M58 96 H260 M58 146 H172"></path>
+                <path class="gaze-path z-path" d="M70 42 H345 L92 198 H356"></path>
+              </svg>
+              <div class="micro-lines">
+                <p>Scanning creates much larger eye movements: F and Z shapes, with abrupt pauses.</p>
+                <p>The eyes search for targets and visual anchors instead of processing text sequentially for meaning.</p>
+                <p>Scanning is efficient, but it cannot support deep comprehension or memory formation.</p>
+              </div>
+              <div class="cognitive-effect-card">
+                <span>Result</span>
+                <strong>Rapid information extraction detected.</strong>
+                <ul>
+                  <li>Reduced deep comprehension</li>
+                  <li>Weak narrative retention</li>
+                  <li>Increased attentional fragmentation</li>
+                </ul>
+              </div>
+              <div class="annotation-chip chip-skim">Common in digital scanning.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="eye-panel reading-panel" data-eye-side="read">
+          <header>
+            <h3>Deep Reading</h3>
+            <p class="side-subtitle">Sustained attention. Sequential meaning-making.</p>
+            <p class="side-research-label">Reading processes words in localized, linear patterns.</p>
+          </header>
+
+          <div class="experience-surface">
+            <div class="deep-text-card">
+              <p>
+                Mira reread the letter because the first sentence did not sound like her brother. It was too careful, too polished, too unlike the person who used to leave jokes in the margins of grocery lists. On the second reading, she noticed the smudge beside the date and realized he had written it in a hurry, trying to hide fear inside neat handwriting.
+              </p>
+            </div>
+          </div>
+
+          <div class="eye-report" data-eye-report aria-hidden="true">
+            <div class="report-window">
+              <p class="small-label">Eye Movement Report</p>
+              <h4>Sequential Processing</h4>
+              <svg class="gaze-map read-map" viewBox="0 0 420 240" aria-hidden="true">
+                <defs>
+                  <marker id="read-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M0 0 L10 5 L0 10 z"></path>
+                  </marker>
+                </defs>
+                <path class="gaze-path line-one" d="M44 54 H360"></path>
+                <path class="gaze-path line-two" d="M44 102 H338"></path>
+                <path class="gaze-path line-three" d="M44 150 H372"></path>
+                <path class="gaze-path line-four" d="M44 198 H305"></path>
+              </svg>
+              <div class="micro-lines">
+                <p>Reading creates smaller and highly localized eye movements.</p>
+                <p>Readers process words sequentially for meaning, supporting comprehension and memory.</p>
+                <p>When eye movement stays coupled to brain processing, the text becomes easier to encode.</p>
+              </div>
+              <div class="connectivity-block">
+                <p>
+                  During 9 days of reading, participants showed significant increases in functional connectivity in brain regions associated with language comprehension.
+                </p>
+                <div class="mini-neural-network" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="cognitive-effect-card">
+                <span>Result</span>
+                <strong>Sequential meaning-making detected.</strong>
+                <ul>
+                  <li>Stronger semantic processing</li>
+                  <li>Improved narrative retention</li>
+                  <li>Connectivity growth over time</li>
+                </ul>
+              </div>
+              <div class="annotation-chip chip-read">Associated with semantic processing.</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="comparison-panel" data-comparison-panel aria-live="polite">
+        <p class="small-label">Comparative Brain Analysis</p>
+        <h3>Same screen. Different cognitive system.</h3>
+        <div class="comparison-table" role="table" aria-label="Skimming and deep reading comparison">
+          <div role="row">
+            <span role="columnheader">Cognitive Function</span>
+            <span role="columnheader">Skimming</span>
+            <span role="columnheader">Deep Reading</span>
+          </div>
+          <div role="row">
+            <span role="rowheader">Attention</span>
+            <span>Fragmented</span>
+            <span>Sustained</span>
+          </div>
+          <div role="row">
+            <span role="rowheader">Eye Movement</span>
+            <span>F/Z scanning</span>
+            <span>Linear tracking</span>
+          </div>
+          <div role="row">
+            <span role="rowheader">Dopamine</span>
+            <span>Variable reward spikes</span>
+            <span>Gradual engagement</span>
+          </div>
+          <div role="row">
+            <span role="rowheader">Memory</span>
+            <span>Ghost knowledge</span>
+            <span>Deep retention</span>
+          </div>
+          <div role="row">
+            <span role="rowheader">Comprehension</span>
+            <span>Surface-level</span>
+            <span>Sequential meaning</span>
+          </div>
+          <div role="row">
+            <span role="rowheader">Neural Effect</span>
+            <span>Hyperarousal</span>
+            <span>Connectivity growth</span>
+          </div>
+        </div>
+        <button type="button" data-replay-eye>Watch Attention Again</button>
+      </div>
+
+      <div class="final-takeaway" data-final-takeaway>
+        <h3>The issue is not simply content.</h3>
+        <p>
+          Format overrides content. The brain does not distinguish whether information is educational or meaningless if both are consumed through identical rapid-fire mechanisms.
+        </p>
+        <p>
+          The architecture of attention itself changes.
+        </p>
+      </div>
+    </section>
+
+    <section class="load-section overstimulation-section" aria-labelledby="load-title" data-dopamine-lab>
+      <div class="section-heading">
+        <p class="small-label">Part 03</p>
+        <h2 id="load-title">Your Brain After Endless Scrolling</h2>
+        <p>
+          Short-form media trains the brain to expect speed, novelty, and constant reward. Reading asks for the opposite: sustained attention, patience, and deep processing.
+        </p>
+      </div>
+
+      <div class="dopamine-feed-stage" aria-label="Dopamine feed simulation">
+        <div class="feed-fragment-layer" data-feed-fragments aria-hidden="true"></div>
+
+        <div class="dopamine-lab-grid">
+          <div class="dopamine-phone-feed">
+            <div class="phone-feed-topbar">
+              <span>Instagram</span>
+              <b>For You</b>
+            </div>
+            <div class="dopamine-scroll-feed" data-dopamine-feed aria-label="Scrollable fake short-form feed">
+              <article class="dopamine-reel reel-a">
+                <span>FOR YOU</span>
+                <h3>POV: you found the secret productivity hack</h3>
+                <p>One more swipe and your life becomes organized.</p>
+              </article>
+              <article class="dopamine-reel reel-b">
+                <span>NEW</span>
+                <h3>Top 10 facts your brain cannot ignore</h3>
+                <p>Fact 8 feels educational. Fact 9 is just noise.</p>
+              </article>
+              <article class="dopamine-reel reel-c">
+                <span>TRENDING</span>
+                <h3>Subway loop + book recommendations</h3>
+                <p>Fast captions, flashing thumbnails, tiny reward.</p>
+              </article>
+              <article class="dopamine-reel reel-d">
+                <span>WATCH NEXT</span>
+                <h3>Almost loaded...</h3>
+                <p>The anticipation is the point.</p>
+              </article>
+              <article class="dopamine-reel reel-e">
+                <span>FOR YOU</span>
+                <h3>Random clip that might be amazing</h3>
+                <p>The brain keeps checking because the reward is unpredictable.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="dopamine-graph" aria-label="Dopamine activity graph">
+            <span>dopamine activity</span>
+            <div class="spike-line">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <p data-dopamine-status>stable before scrolling</p>
+          </div>
+        </div>
+
+      <div class="hyperarousal-callout" data-hyperarousal-copy>
+        <h3>Hyperarousal persists even after you stop scrolling.</h3>
+        <p>
+            Because your brain is "addicted" to the feeling of never knowing what comes next. That anticipation makes it harder to settle into a single sustained task, especially reading.
+        </p>
+      </div>
+
+        <div class="clinical-annotation annotation-one">Unpredictable reward schedule detected.</div>
+        <div class="clinical-annotation annotation-two">Continuous curiosity and anticipation sustained.</div>
+      </div>
+
+      <div class="try-focus-panel" data-try-focus>
+        <h3>Now try focusing.</h3>
+      </div>
+
+      <div class="unstable-reading-panel" data-unstable-reading>
+        <div class="afterimage-field" aria-hidden="true">
+          <span>loading</span>
+          <span>next</span>
+          <span>watch</span>
+          <span>new</span>
+        </div>
+        <div class="calm-reading-card">
+          <p>
+            A quiet paragraph asks the brain to hold one idea at a time. The sentences do not flash, reward, or surprise. They wait for attention to become steady again.
+          </p>
+        </div>
+      </div>
+
+      <div class="child-plasticity-panel">
+        <div class="developing-network" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div>
+          <p class="small-label">Developing Brain</p>
+          <h3>The prefrontal cortex remains highly plastic until the mid-twenties.</h3>
+          <p>
+            Because this region anchors sustained attention, focus, and self-control, prolonged short-form media exposure can be especially amplified in children and adolescents. If attention control weakens early, reading becomes harder to sustain.
+          </p>
+        </div>
+      </div>
+
+      <div class="reward-threshold-panel" data-reward-panel>
+        <div>
+          <p class="small-label">Natural Reward Threshold</p>
+          <h3>The brain adapts to overstimulation.</h3>
+          <p>
+            The algorithmic feed operates on an unpredictable reward schedule: the next swipe might reward you, so anticipation continues. Overstimulation can elevate the brain's natural dopamine threshold, making slower biological rewards like reading feel less exciting.
+          </p>
+        </div>
+
+        <div class="reward-buttons">
+          <button type="button" class="fast-reward" data-reward-button="fast">
+            <span>Fast Rewards</span>
+            <strong>tap</strong>
+          </button>
+          <button type="button" class="slow-reward" data-reward-button="reading">
+            <span>Reading</span>
+            <strong>steady</strong>
+          </button>
+        </div>
+
+        <div class="threshold-meter" style="--threshold:22%;">
+          <span>Dopamine threshold</span>
+          <i><b data-threshold-bar></b></i>
+          <p data-threshold-copy>
+            Slower biological tasks can still feel rewarding.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="deep-reading-section hybrid-reading-section" aria-labelledby="hybrid-title" data-audio-reading-section>
+      <div class="section-heading">
+        <p class="small-label">Part 04</p>
+        <h2 id="hybrid-title">Now try reading this with audio</h2>
+        <p>
+          Hybrid literacy pairs visual reading with audio support, helping the brain process the same meaning through more than one pathway.
+        </p>
+      </div>
+
+      <div class="audio-reading-lab">
+        <div class="audio-text-panel">
+          <p class="blurred-preview">
+            The river moved slowly under the bridge, carrying little pieces of moonlight between the stones. Liora listened until the water sounded like a voice, then read the sentence again and finally understood why the traveler had refused to leave.
+          </p>
+          <button type="button" class="audio-play-button" data-audio-play>
+            <span>Play Audio Reading</span>
+            <b aria-hidden="true">&rarr;</b>
+          </button>
+          <p class="audio-live-text" data-audio-text>
+            The library was quiet enough for Mina to hear the rain tapping against the windows. As the words moved across the page, the narrator's voice helped her hold each image a little longer: the locked garden, the silver gate, the friend waiting with a lantern. Reading and listening together made the story feel less like homework and more like entering a room.
+          </p>
+        </div>
+
+        <div class="hybrid-explanation" data-audio-result>
+          <h3>Easier to read?</h3>
+          <p>
+            This is because audio and text can stimulate the auditory cortex and the prefrontal lobe at the same time. While the auditory cortex supports sound processing, the prefrontal lobe helps organize attention and understanding, so the brain can move through information more fluently.
+          </p>
+          <p>
+            Audiobooks, or reading while listening to audiobooks, can make reading more immersive and more fun. This is not a replacement for deep reading; it is a hybrid literacy support that helps attention reconnect to meaning.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="repair-section fomo-section" aria-labelledby="fomo-title">
+      <div class="section-heading">
+        <p class="small-label">Part 05</p>
+        <h2 id="fomo-title">The Illusion of Newness</h2>
+        <p>
+          Infinite scroll is powered by FOMO: the feeling that the next post might be newer, better, or more valuable than the thing in front of you.
+        </p>
+      </div>
+
+      <div class="fomo-board">
+        <div class="fomo-feed" aria-hidden="true">
+          <span>new post loading</span>
+          <span>someone replied</span>
+          <span>watch next</span>
+          <span>newer content</span>
+          <span>almost refreshed</span>
+        </div>
+
+        <div class="fomo-copy">
+          <h3>Novelty is not the same as meaning.</h3>
+          <p>
+            Infinite scroll creates an illusion of novelty. Because new content is constantly arriving, the brain starts treating "new" as "valuable," even when the information is shallow.
+          </p>
+          <p>
+            This is why scanning feels productive: the eyes are chasing anchors, images, bullets, captions, and signals of importance. But when eye movement is driven by visual and spatial heuristics instead of linguistic meaning, reading can become mindless. The eyes move, but processing decouples from understanding.
+          </p>
+          <p>
+            The result is ghost knowledge: familiarity without deep comprehension.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="lens-back" href="./archive.html" aria-label="Go back to educational historical lens">
+    <b aria-hidden="true">&larr;</b>
+    <span>Lens 01</span>
+  </a>
+  <a class="lens-next" href="./lens-03.html" aria-label="Go to technological lens">
+    <span>Lens 03</span>
+    <b aria-hidden="true">&rarr;</b>
+  </a>
+  <script src="./lens-02.js"></script>
+  <script src="./lens-pager.js"></script>
+</body>
+</html>

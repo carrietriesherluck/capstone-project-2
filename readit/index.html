@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>READIT | The Living Library for Readers</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./readit.css">
+</head>
+<body>
+<nav class="readit-nav" aria-label="READIT navigation">
+  <a class="readit-mark" href="./">READIT</a>
+
+  <div class="nav-links">
+    <a class="back-start" href="../index.html">Go Back to the Beginning</a>
+    <button class="nav-button" type="button" data-open-thread>Start a thread</button>
+  </div>
+</nav>
+
+  <header class="readit-banner">
+    <div class="hero-copy">
+      <p class="tiny-label">the living library for readers</p>
+      <h1>READIT</h1>
+      <p class="supporting-line">Pull up a chair. Spill the tea. Find people who finished the book and immediately needed to talk.</p>
+      <div class="banner-actions" aria-label="READIT actions">
+        <button class="secondary-action" type="button" data-open-thread>Start a thread</button>
+        <button class="secondary-action green" type="button" data-open-table>Create a table</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="readit-app">
+    <aside class="table-directory" id="tables" aria-labelledby="tables-title">
+      <div class="section-heading">
+        <p class="tiny-label">table directory</p>
+        <h2 id="tables-title">Find your table</h2>
+        <p>Every table is a reader-made community. Pull up a chair where your book feelings belong.</p>
+      </div>
+      <button class="primary-action full" type="button" data-open-table>Create a table</button>
+      <div class="table-grid" data-table-grid></div>
+    </aside>
+
+    <section class="library-feed" id="threads" aria-labelledby="threads-title">
+      <div class="feed-main">
+        <div class="section-heading feed-heading">
+          <div>
+            <p class="tiny-label">community board</p>
+            <h2 id="threads-title">Latest threads</h2>
+            <p>Questions, confessions, recommendations, and literary gossip from around the library.</p>
+          </div>
+          <button class="primary-action compact" type="button" data-open-thread>New thread</button>
+        </div>
+
+        <div class="library-status-strip" aria-label="Library status">
+          <div class="status-pill selected-table-card" data-selected-table>
+            <p class="tiny-label">current chair</p>
+            <h3>All tables</h3>
+            <p>Browse the whole library.</p>
+          </div>
+
+          <div class="status-pill">
+            <p class="tiny-label">readers online</p>
+            <strong data-online-count>781</strong>
+            <span>quietly having loud opinions</span>
+          </div>
+
+          <div class="status-pill library-rules">
+            <p class="tiny-label">house rules</p>
+            <p>No spoilers without warning. Be kind.</p>
+          </div>
+
+          <button class="reset-button" type="button" data-reset-demo>Reset demo data</button>
+        </div>
+        <article class="tea-card" data-tea-card aria-label="Tea of the Day"></article>
+
+        <div class="feed-controls" aria-label="Thread filters">
+          <div class="filter-chips" data-filter-chips></div>
+          <label class="sort-control">
+            <span>Sort</span>
+            <select data-sort-select>
+              <option value="newest">Newest</option>
+              <option value="tea">Most tea</option>
+              <option value="replies">Most replies</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="chair-banner" data-chair-banner hidden></div>
+        <div class="post-feed" data-post-feed></div>
+      </div>
+    </section>
+
+   
+  </main>
+
+  <footer class="readit-footer">
+    <p>Built for readers who love books, but miss having people to talk about them with.</p>
+    <a href="../archive/demo.html">Back to quiz</a>
+  </footer>
+
+  <dialog class="readit-modal" data-thread-modal aria-labelledby="thread-modal-title">
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close thread">x</button>
+      <div data-thread-detail></div>
+    </div>
+  </dialog>
+
+  <dialog class="readit-modal" data-create-thread-modal aria-labelledby="create-thread-title">
+    <form class="modal-card form-card" method="dialog" data-create-thread-form>
+      <button class="modal-close" type="button" data-close-modal aria-label="Close create thread form">x</button>
+      <p class="tiny-label">new thread</p>
+      <h2 id="create-thread-title">Start a thread</h2>
+      <label>Choose a table<select name="tableId" required data-thread-table-select></select></label>
+      <label>Choose post type<select name="type" required data-post-type-select></select></label>
+      <label>Title<input name="title" type="text" required maxlength="120" data-thread-title></label>
+      <label>Body<textarea name="body" required rows="5" data-thread-body></textarea></label>
+      <label>Tags<input name="tags" type="text" placeholder="romance, rainy vibes, no spoilers"></label>
+      <label class="checkbox-label"><input name="spoiler" type="checkbox"> <span>Spoiler warning</span></label>
+      <button class="primary-action full" type="submit">Post thread</button>
+    </form>
+  </dialog>
+
+  <dialog class="readit-modal" data-create-table-modal aria-labelledby="create-table-title">
+    <form class="modal-card form-card" method="dialog" data-create-table-form>
+      <button class="modal-close" type="button" data-close-modal aria-label="Close create table form">x</button>
+      <p class="tiny-label">new table</p>
+      <h2 id="create-table-title">Create a table</h2>
+      <label>Table name<input name="name" type="text" required placeholder="Books That Ruined Me"></label>
+      <label>Description<textarea name="description" required rows="3" placeholder="For stories that rewired your brain chemistry and left you staring at the ceiling."></textarea></label>
+      <label>Vibe<input name="vibe" type="text" placeholder="emotional damage, but make it literary"></label>
+      <label>Rules<textarea name="rules" rows="3" placeholder="No spoilers without warning. Be kind. Cry responsibly."></textarea></label>
+      <label>Tags<input name="tags" type="text" required placeholder="emotional damage, literary fiction, comfort"></label>
+      <label>Icon<input name="icon" type="text" maxlength="2" placeholder="📚"></label>
+      <button class="primary-action full" type="submit">Open table</button>
+    </form>
+  </dialog>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <script type="module" src="./readit.js"></script>
+</body>
+</html>

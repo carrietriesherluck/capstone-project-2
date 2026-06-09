@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading Identity Demo | Unscripted Archive</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fraunces:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">   <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./demo.css">
+</head>
+<body class="demo-page">
+<nav>
+  <a class="logo" href="../index.html">AP Capstone Project</a>
+  <div class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="./exhibit.html">Archive</a>
+  </div>
+</nav>
+
+  <main class="demo-shell">
+    <section class="quiz-hero" data-panel="intro">
+      <div class="hero-copy">
+        <p class="small-label">Fun Demo / Stage 01</p>
+        <h1>Find Your Reading Identity</h1>
+        <p>
+          Answer 19 quick questions to unlock your reading world, your best-fit reading style, and the barrier that most often gets between you and books.
+        </p>
+        <button class="primary-action" type="button" data-start-quiz>Start Quiz</button>
+      </div>
+
+    </section>
+
+    <section class="quiz-panel is-hidden" data-panel="quiz" aria-live="polite">
+      <header class="quiz-top">
+        <div>
+          <p class="small-label">Book Identity Quiz</p>
+          <h1 data-question-title>Question</h1>
+        </div>
+        <div class="progress-card">
+          <span data-progress-label>1 / 19</span>
+          <i><b data-progress-fill></b></i>
+        </div>
+      </header>
+
+      <div class="option-grid" data-option-grid></div>
+
+      <footer class="quiz-footer">
+        <button class="secondary-action" type="button" data-prev-question>Back</button>
+        <p data-helper-text>Choose the option that feels most like you.</p>
+      </footer>
+    </section>
+
+    <section class="result-panel is-hidden" data-panel="result">
+      <div class="result-world" data-result-world>
+        <p class="small-label">Your Reading Profile</p>
+        <h1 data-result-name></h1>
+        <h2 data-result-world-name></h2>
+        <p data-result-description></p>
+      </div>
+
+      <div class="profile-grid">
+        <article class="profile-card">
+          <span>Reading Difficulty</span>
+          <h3 data-style-name></h3>
+          <p data-style-description></p>
+        </article>
+        <article class="profile-card">
+          <span>Main Barrier</span>
+          <h3 data-barrier-name></h3>
+          <p data-barrier-description></p>
+        </article>
+      </div>
+
+      <section class="book-list">
+        <h2>You might love</h2>
+        <div data-book-list></div>
+      </section>
+
+      <div class="result-actions">
+        <button class="primary-action" type="button" data-restart-quiz>Retake Quiz</button>
+        <button class="secondary-action continue-world-action" type="button" data-enter-world>CONTINUE</button>      </div>
+    </section>
+  </main>
+
+  <script src="./demo.js"></script>
+</body>
+</html>

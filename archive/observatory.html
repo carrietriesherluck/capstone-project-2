@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Observatory | Reading Identity World</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:ital@1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./observatory.css">
+</head>
+<body class="observatory-page">
+  <canvas class="rain-canvas" data-rain-canvas aria-hidden="true"></canvas>
+
+  <nav class="observatory-nav">
+    <a class="logo" href="../index.html">AP Capstone Project</a>
+    <div class="nav-links">
+      <a href="./demo.html">Back to Quiz</a>
+      <a href="./chronicle.html">Fantasy</a>
+      <a href="./investigation.html">Mystery</a>
+      <a href="./romance.html">Romance</a>
+      <a href="./observatory.html">Observatory</a>
+    </div>
+  </nav>
+
+  <main class="observatory-shell">
+    <section class="apartment-hero" id="window">
+      <div class="hero-copy">
+        <p class="eyebrow">literary new york / rainy sunday</p>
+        <h1>The Observatory</h1>
+        <p class="tagline">for people who underline sentences and think about them for weeks</p>
+        <a class="room-enter" href="#books">step into the apartment</a>
+      </div>
+
+      <button class="nyc-window" type="button" data-window-quote aria-label="Change window quote">
+        <span class="rain-pane"></span>
+        <span class="city-skyline" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </span>
+        <span class="traffic-light one" aria-hidden="true"></span>
+        <span class="traffic-light two" aria-hidden="true"></span>
+        <span class="window-instruction">Click the window</span>
+        <span class="window-quote">Stories are how we remember who we are.</span>
+      </button>
+
+      <div class="thinking-note" data-thinking-note>
+        <span>currently thinking about:</span>
+        <p>how some people become part of your internal monologue long after they leave</p>
+      </div>
+
+      <div class="open-tabs" aria-label="Open tabs">
+        <span>open tabs</span>
+        <p>best coffee shops in nyc</p>
+        <p>books that feel like autumn</p>
+        <p>before sunrise analysis</p>
+        <p>train rides through europe</p>
+        <p>things i wish i'd said</p>
+      </div>
+      <a class="section-cue" href="#books" aria-label="Go to book stack">↓</a>
+    </section>
+
+    <section class="room-scene book-room" id="books">
+      <div class="room-caption">
+        <p class="eyebrow">messy stack / desk copy</p>
+        <h2>currently on my desk</h2>
+      </div>
+      <div class="desk-fragments" aria-hidden="true">
+        <p class="fragment receipt">espresso 6.50<br>oat milk 1.00<br>rain tax free</p>
+        <p class="fragment marginalia">underline this<br>and come back later</p>
+        <p class="fragment tab-note">open tab:<br>books that feel like autumn</p>
+        <p class="fragment pencil-note">page 47<br>hurt in a quiet way</p>
+      </div>
+      <p class="click-hint">click a cover to open the note</p>
+      <div class="book-stack" data-shelf></div>
+      <a class="section-cue dark" href="#music" aria-label="Go to currently playing">↓</a>
+    </section>
+
+    <section class="room-row">
+      <article class="room-scene music-room" id="music">
+        <p class="eyebrow">soundtrack for existing</p>
+        <h2>books that leave the rain on after they're over</h2>
+        <p class="quiet-note">Press play before continuing.</p>
+        <iframe src="https://open.spotify.com/embed/playlist/27mlDD6FyZMWYzVzKAIUXQ?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify playlist"></iframe>
+        <a class="section-link" href="#desk">continue to the desk ↓</a>
+      </article>
+
+      <article class="room-scene desk-room" id="desk">
+        <div class="room-caption">
+          <p class="eyebrow">loose objects / half-finished thoughts</p>
+          <h2>the desk</h2>
+        </div>
+        <div class="desk-scene" data-desk>
+          <button class="desk-object coffee" type="button" data-reflection="Some books are less about plot and more about company."><span>still warm</span></button>
+          <button class="desk-object camera" type="button" data-reflection="Memory is never exact. It edits the light and keeps the feeling."><span>for remembering things badly</span></button>
+          <button class="desk-object letter" type="button" data-reflection="The unsent version of a sentence can stay with you longer than the sent one."><span>never sent</span></button>
+          <button class="desk-object ticket" type="button" data-reflection="Every story begins by leaving one version of yourself behind."><span>one-way</span></button>
+          <button class="desk-object journal" type="button" data-reflection="Some thoughts only become real after you write them badly first."><span>things i wish i'd said</span></button>
+        </div>
+        <p class="reflection-output" data-reflection-output>Click an object on the desk.</p>
+        <a class="section-link desk-link" href="#film">continue ↓</a>
+      </article>
+    </section>
+
+    <section class="room-row bottom-row">
+      <article class="room-scene loyalty-room" id="film">
+        <div class="room-caption">
+          <p class="eyebrow">independent bookseller / rainy day rewards</p>
+          <h2>bookstore loyalty card</h2>
+        </div>
+        <div class="loyalty-card">
+          <p class="loyalty-kicker">Independent Bookseller</p>
+          <h3>Bookstore Loyalty Card</h3>
+          <div class="punch-list">
+            <p><span>✓</span> cried over fictional people</p>
+            <p><span>✓</span> bought another book</p>
+            <p><span>✓</span> said "one more chapter"</p>
+            <p><span>✓</span> highlighted a sentence</p>
+            <p><span>□</span> emotionally recovered</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="room-scene reader-card" aria-label="The Reader profile">
+        <p class="eyebrow">The Reader</p>
+        <div class="reader-avatar" aria-hidden="true">
+          <span></span>
+        </div>
+        <h2>The Millennial</h2>
+        <p class="reader-deck">reading life, yearning, and books that alter your brain chemistry</p>
+        <div class="reader-stats">
+          <span>1 Subscriber</span>
+          <span>∞ Thoughts</span>
+        </div>
+        <div class="reader-about">
+          <h3>About</h3>
+          <p>You read for the feeling that a book understands something you couldn't explain yourself.</p>
+          <p>You don't mind slow stories if they're honest. You're drawn to complicated people, unfinished conversations, and endings that leave something unresolved.</p>
+          <p><b>Most likely to read:</b> Normal People, Intermezzo, Never Let Me Go.</p>
+          <p><b>Current soundtrack:</b> Phoebe Bridgers and rain against the window.</p>
+        </div>
+        <a class="enter-feed" href="../readit/">enter the reading feed</a>
+      </article>
+    </section>
+  </main>
+
+  <aside class="observatory-ai-guide" data-observatory-ai-guide aria-label="AI literary reading guide">
+    <button class="observatory-ai-launcher" type="button" data-observatory-ai-toggle aria-expanded="false" aria-controls="observatory-ai-panel">
+      <span aria-hidden="true">AI</span>
+    </button>
+    <p class="observatory-ai-hint">Ask the apartment guide to unpack themes, quotes, and the parts that linger.</p>
+    <section class="observatory-ai-panel" id="observatory-ai-panel" aria-hidden="true">
+      <div class="observatory-ai-header">
+        <div>
+          <p class="eyebrow">literary reading guide</p>
+          <h2>Talk to the text</h2>
+        </div>
+        <button class="observatory-ai-close" type="button" data-observatory-ai-close aria-label="Close AI guide">x</button>
+      </div>
+      <div class="observatory-ai-card">
+        <p>Flint opens in its own secure page. Use it to discuss themes, character choices, quotes, and the feelings you cannot quite name yet.</p>
+        <a class="observatory-ai-open" href="https://app.flintk12.com/activities/book-discussion-684d4b/sessions/new">Open AI Guide</a>
+        <span>Opens in this tab.</span>
+      </div>
+    </section>
+  </aside>
+
+  <dialog class="book-dialog" data-book-dialog aria-labelledby="book-title">
+    <button class="close-dialog" type="button" data-close-dialog aria-label="Close book note">x</button>
+    <div class="dialog-layout">
+      <div class="book-cover" data-book-cover></div>
+      <div class="book-details">
+        <p class="eyebrow">Shelf Note</p>
+        <h2 id="book-title" data-book-title></h2>
+        <p data-book-synopsis></p>
+        <h3>You might like this if:</h3>
+        <ul data-book-reasons></ul>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="./observatory.js"></script>
+</body>
+</html>

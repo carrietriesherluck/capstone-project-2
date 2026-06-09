@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Investigation | Mystery Reading World</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./investigation.css">
+</head>
+<body class="investigation-page">
+  <nav class="investigation-nav">
+    <a class="logo" href="../index.html">AP Capstone Project</a>
+    <div class="nav-links">
+      <a href="./demo.html">Back to Quiz</a>
+      <a href="./chronicle.html">Fantasy</a>
+      <a href="./investigation.html">Mystery</a>
+      <a href="./romance.html">Romance</a>
+      <a href="./observatory.html">Observatory</a>
+    </div>
+  </nav>
+
+  <main class="investigation-shell">
+    <section class="investigation-hero">
+      <div class="hero-copy">
+        <p class="case-label">mystery identity world</p>
+        <h1>The Investigation</h1>
+        <p>for people who refuse to stop asking why</p>
+        <a class="case-button" href="#cases">open the first file</a>
+      </div>
+      <aside class="night-status" aria-live="polite">
+        <p>New York</p>
+        <strong>11:47 PM</strong>
+        <span>Case Status: Unresolved</span>
+        <em data-night-observation>Every answer creates another question.</em>
+      </aside>
+    </section>
+
+    <section class="case-board" id="cases">
+      <div class="section-heading">
+        <p class="case-label">current cases</p>
+        <h2>files for people who need answers</h2>
+      </div>
+      <div class="case-files" data-case-files></div>
+    </section>
+
+    <section class="investigation-grid">
+      <article class="investigation-panel playlist-panel">
+        <p class="case-label">investigation playlist</p>
+        <h2>soundtrack for connecting the dots</h2>
+        <p class="panel-note">Dark, modern, and built for walking home under streetlights while overthinking everything.</p>
+        <iframe src="https://open.spotify.com/embed/playlist/7efmyhFFuXfUNFzbr7Ud8H?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Mystery investigation playlist"></iframe>
+      </article>
+
+      <article class="investigation-panel open-cases-panel">
+        <p class="case-label">open cases</p>
+        <h2>tabs nobody closed</h2>
+        <div class="case-tabs" data-case-tabs>
+          <button type="button" data-open-case="case-001">A locked classroom. One missing exam. No broken door.</button>
+          <button type="button" data-open-case="case-002">A voice memo arrives from someone who vanished last year.</button>
+          <button type="button" data-open-case="case-003">Every witness remembers the same party differently.</button>
+          <button type="button" data-open-case="case-004">A library book is returned with a warning inside.</button>
+          <button type="button" data-open-case="case-005">The podcast transcript changes after midnight.</button>
+        </div>
+        <p class="tab-output" data-tab-output>Click an open case to read the first theory.</p>
+      </article>
+    </section>
+
+    <section class="evidence-profile-grid">
+      <article class="investigation-panel evidence-panel">
+        <div class="section-heading">
+          <p class="case-label">evidence locker</p>
+          <h2>objects that remember too much</h2>
+        </div>
+        <div class="evidence-desk" data-evidence-desk>
+          <button class="evidence key" type="button" data-observation="The key never matters until someone insists there was no locked door."><span>key</span></button>
+          <button class="evidence notebook" type="button" data-observation="Curiosity is a form of persistence. Write the question down before the story answers it."><span>notebook</span></button>
+          <button class="evidence photo" type="button" data-observation="Every mystery begins with something missing from the frame."><span>photograph</span></button>
+          <button class="evidence letter" type="button" data-observation="The most important clue is often the sentence nobody wanted to send."><span>letter</span></button>
+          <button class="evidence ticket" type="button" data-observation="A ticket proves someone was going somewhere. It never proves why."><span>ticket</span></button>
+        </div>
+        <p class="evidence-output" data-evidence-output>Click an object in the locker.</p>
+      </article>
+
+      <article class="investigation-panel detective-profile">
+        <div class="profile-mark" aria-hidden="true"></div>
+        <p class="case-label">The Reader</p>
+        <h2>The Plot Detective</h2>
+        <p class="profile-line">finding clues where nobody else looks</p>
+        <div class="profile-stats">
+          <span>1 subscriber</span>
+          <span>12 theories</span>
+        </div>
+        <div class="profile-about">
+          <p>You read because uncertainty bothers you.</p>
+          <p>You enjoy hidden motives, unreliable narrators, and stories that reward attention.</p>
+          <p>You are most likely to pause a movie and say: <b>"Wait. Go back."</b></p>
+        </div>
+        <a class="case-button secondary" href="../readit/">enter the reading feed</a>
+      </article>
+    </section>
+  </main>
+
+  <aside class="mystery-ai-guide" data-mystery-ai-guide aria-label="AI mystery reading guide">
+    <button class="mystery-ai-launcher" type="button" data-mystery-ai-toggle aria-expanded="false" aria-controls="mystery-ai-panel">
+      <span aria-hidden="true">AI</span>
+    </button>
+    <p class="mystery-ai-hint">Ask the case assistant to help you follow clues more closely.</p>
+    <section class="mystery-ai-panel" id="mystery-ai-panel" aria-hidden="true">
+      <div class="mystery-ai-header">
+        <div>
+          <p class="case-label">case assistant</p>
+          <h2>Talk to the mystery</h2>
+        </div>
+        <button class="mystery-ai-close" type="button" data-mystery-ai-close aria-label="Close AI guide">x</button>
+      </div>
+      <div class="mystery-ai-card">
+        <p>Flint opens in its own secure page. Use it to question motives, track clues, unpack unreliable narration, and build better theories as you read.</p>
+        <a class="mystery-ai-open" href="https://app.flintk12.com/activities/mystery-reading-12c973/sessions/new">Open AI Guide</a>
+        <span>Opens in this tab.</span>
+      </div>
+    </section>
+  </aside>
+
+  <dialog class="case-dialog" data-case-dialog aria-labelledby="case-title">
+    <button class="close-case" type="button" data-close-case aria-label="Close case file">x</button>
+    <div class="case-dialog-layout">
+      <figure class="case-folder" data-case-folder>
+        <img src="" alt="" data-case-cover>
+        <figcaption data-case-folder-label></figcaption>
+      </figure>
+      <div class="case-copy">
+        <p class="case-label">case file</p>
+        <h2 id="case-title" data-case-title></h2>
+        <h3>Primary Evidence</h3>
+        <p data-case-evidence></p>
+        <h3>Questions</h3>
+        <ul data-case-questions></ul>
+        <h3>Recommended for</h3>
+        <p data-case-recommendation></p>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="./investigation.js"></script>
+</body>
+</html>
