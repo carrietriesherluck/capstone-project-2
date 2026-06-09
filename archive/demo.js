@@ -555,7 +555,7 @@ function getOptionArtMarkup(answer, index){
     omg: "oh my god tell me everything.png",
     secret: "2spill.jpeg",
     heart: "2hugging.jpg",
-    guess: "lemme guess.JPG",
+    guess: "lemme guess.jpg",
     think: "what do you think about it.png",
     candle: "2lifechanging.webp",
 
