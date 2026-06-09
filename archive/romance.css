@@ -505,7 +505,7 @@ body.romance-page::before{
   height: 190px;
   border: 0;
   border-radius: 0;
-  background: url("../Images/penting.png") center / contain no-repeat;
+  background: url("../Images/penting.PNG") center / contain no-repeat;
   transform: rotate(8deg);
   box-shadow: none;
 }
